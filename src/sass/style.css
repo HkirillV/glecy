@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #FEAFC3;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: Inter, sans-serif;
+}
+
+h1, .h1 {
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+h2, .h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding: 0 8px 0 16px;
+}
+
+.navigation__link-text {
+  color: #2D3440;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

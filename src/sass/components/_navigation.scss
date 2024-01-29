@@ -1,0 +1,24 @@
+.navigation__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding: 0 8px 0 16px;
+}
+
+.navigation__link {
+  &-text {
+    color: $color-header-text;
+    @include font($size: 1.8rem, $height: normal, $weight: 400);
+  }
+}

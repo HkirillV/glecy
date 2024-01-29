@@ -1,13 +1,45 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>glecy</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glecy | Главная</title>
+</head>
+<body>
+<div class="header container">
+  <nav class="navigation">
+    <div class="navigation__menu">
+      <div class="navigation__item-menu">
+        <a class="navigation__logo" href="">
+          <img class="navigation__logo-icon" src="./src/img/header/logo.svg" loading="lazy" width="137" height="56" alt="logo">
+        </a>
+        <div class="navigation__item">
+          <a class="navigation__link navigation__catalog" href="/">
+            <p class="navigation__link-text">Каталог</p>
+            <img class="navigation__catalog-icon" src="./src/img/header/Arrow-down.svg" alt="catalog-icon"  loading="lazy" width="16" height="17">
+          </a>
+        </div>
+        <div class="navigation__item">
+          <a class="navigation__link" href="/">
+            <p class="navigation__link-text">Доставка и оплата</p>
+          </a>
+        </div>
+        <div class="navigation__item">
+          <a class="navigation__link" href="/">
+            <p class="navigation__link-text">О компании</p>
+          </a>
+        </div>
+      </div>
+      <div class="navigation__item-menu">
+        <a class="navigation__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
+        <button class="navigation__button" type="button"></button>
+        <button class="navigation__button" type="button"></button>
+        <button class="navigation__button" type="button"></button>
+      </div>
+    </div>
+  </nav>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
 </html>
