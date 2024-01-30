@@ -4,39 +4,55 @@
   <meta charset="UTF-8"/>
   <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./src/css/normalize.css">
+  <link rel="stylesheet" href="./src/sass/style.css">
   <title>Glecy | Главная</title>
 </head>
 <body>
-<div class="header container">
-  <nav class="navigation">
-    <div class="navigation__menu">
-      <div class="navigation__item-menu">
-        <a class="navigation__logo" href="">
-          <img class="navigation__logo-icon" src="./src/img/header/logo.svg" loading="lazy" width="137" height="56" alt="logo">
+<div class="header">
+  <nav class="navigation container">
+    <div class="navigation-menu">
+      <a class="navigation-menu__logo" href="/">
+        <img class="navigation-menu__logo-icon" src="./src/img/header/logo.svg" width="137" height="56" loading="lazy"
+             alt="logo">
+      </a>
+      <div class="navigation-menu__item">
+        <p class="navigation-menu__text">Каталог</p>
+        <button class="navigation-menu__catalog" type="button">
+          <img class="navigation-menu__catalog-icon" src="./src/img/header/Arrow-down.svg" width="16" height="17"
+               loading="lazy" alt="catalog-button">
+        </button>
+      </div>
+      <div class="navigation-menu__item">
+        <a class="navigation-menu__link" href="/">
+          <p class="navigation-menu__text">Доставка и оплата</p>
         </a>
-        <div class="navigation__item">
-          <a class="navigation__link navigation__catalog" href="/">
-            <p class="navigation__link-text">Каталог</p>
-            <img class="navigation__catalog-icon" src="./src/img/header/Arrow-down.svg" alt="catalog-icon"  loading="lazy" width="16" height="17">
-          </a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="/">
-            <p class="navigation__link-text">Доставка и оплата</p>
-          </a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="/">
-            <p class="navigation__link-text">О компании</p>
-          </a>
-        </div>
       </div>
-      <div class="navigation__item-menu">
-        <a class="navigation__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
-        <button class="navigation__button" type="button"></button>
-        <button class="navigation__button" type="button"></button>
-        <button class="navigation__button" type="button"></button>
+      <div class="navigation-menu__item">
+        <a class="navigation-menu__link" href="/">
+          <p class="navigation-menu__text">О компании</p>
+        </a>
       </div>
+    </div>
+    <div class="navigation-button">
+      <a class="navigation-button__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
+      <button class="navigation-button__item navigation-button__search" type="button">
+        <img class="navigator-button__icon" src="./src/img/header/Search.svg" width="16" height="17" loading="lazy"
+             alt="search">
+      </button>
+      <button class="navigation-button__item" type="button">
+        <img class="navigator-button__icon" src="./src/img/header/Log-in.svg" width="16" height="" loading="lazy"
+             alt="вход">
+        <span class="navigation-button__text">Вход</span>
+      </button>
+      <button class="navigation-button__item" type="button">
+        <img class="navigator-button__icon" src="./src/img/header/Cart.svg" width="16" height="17" loading="lazy"
+             alt="card">
+        <span class="navigation-button__text"> 2 товара</span>
+      </button>
+    </div>
+    <div class="burger-menu">
+
     </div>
   </nav>
 </div>

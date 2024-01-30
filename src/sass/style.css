@@ -57,7 +57,7 @@ a {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1190px;
   width: 100%;
   padding-inline: 15px;
   margin-inline: auto;
@@ -66,32 +66,116 @@ a {
 .header {
   display: flex;
   justify-content: center;
+  padding-block: 24px;
 }
 
-.navigation__menu {
+.navigation {
   display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .navigation {
+    justify-content: center;
+  }
+}
+.navigation-menu {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
-
-.navigation__item-menu {
-  display: flex;
-  align-items: center;
+@media (max-width: 1024px) {
+  .navigation-menu {
+    column-gap: 25px;
+  }
 }
-
-.navigation__item {
+.navigation-menu__logo {
+  margin-right: 16px;
+}
+.navigation-menu__item {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 36px;
-  padding: 0 8px 0 16px;
+  padding-inline: 16px;
 }
-
-.navigation__link-text {
+.navigation-menu__text {
   color: #2D3440;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 1280px) {
+  .navigation-menu__text {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.navigation-menu__catalog {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: #FEAFC3;
+  gap: 6px;
+}
+
+.navigation-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 16px;
+}
+@media (max-width: 1024px) {
+  .navigation-button {
+    display: none;
+  }
+}
+.navigation-button__phone {
+  color: #2D3440;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1280px) {
+  .navigation-button__phone {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.navigation-button__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  background-color: rgba(252, 252, 252, 0.3);
+  padding-inline: 16px;
+  border: 0;
+  border-radius: 30px;
+  height: 32px;
+}
+.navigation-button__search {
+  padding-inline: 8px;
+  border-radius: 27px;
+}
+.navigation-button__text {
+  color: #2D3440;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1280px) {
+  .navigation-button__text {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

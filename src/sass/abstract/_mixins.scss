@@ -5,3 +5,33 @@
   line-height: $height;
 }
 
+
+
+@mixin media-tablet {
+  @media (max-width: $tablet) { @content; }
+}
+
+@mixin media-tablet-s {
+  @media (max-width: $tablet-s) { @content; }
+}
+
+@mixin media-tablet-xs {
+  @media (max-width: $tablet-xs) { @content; }
+}
+
+@mixin media-tablet-xxs {
+  @media (max-width: $tablet-xxs) { @content; }
+}
+
+@mixin media-mobile-s {
+  @media (max-width: $mobile-s) { @content; }
+}
+
+@mixin media-mobile-xs {
+  @media (max-width: $mobile-xs) { @content; }
+}
+
+@mixin media-mobile-xxs {
+  @media (max-width: $mobile-xxs) { @content; }
+}
+

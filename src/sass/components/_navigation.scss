@@ -1,24 +1,99 @@
-.navigation__menu {
+.navigation {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+
+  @include media-tablet-s {
+    justify-content: center;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include media-tablet-s {
+      column-gap: 25px;
+    }
+
+
+    &__logo {
+      margin-right: 16px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      padding-inline: 16px;
+    }
+
+    &__text {
+      color: $color-header-text;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-tablet {
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
+    }
+
+    &__catalog {
+      display: flex;
+      align-items: center;
+      border: 0;
+      background-color: $background-body;
+      gap: 6px;
+    }
+  }
 }
 
-.navigation__item-menu {
-  display: flex;
-  align-items: center;
-}
 
-.navigation__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-  padding: 0 8px 0 16px;
-}
 
-.navigation__link {
-  &-text {
+.navigation-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 16px;
+
+  @include media-tablet-s {
+    display: none;
+  }
+
+  &__phone {
     color: $color-header-text;
-    @include font($size: 1.8rem, $height: normal, $weight: 400);
+
+    @include font($size: 1.6rem, $height: normal, $weight: 700);
+
+    @include media-tablet {
+      @include font($size: 1.4rem, $height: normal, $weight: 700);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
+    background-color: $color-extra-light-icon;
+    padding-inline: 16px;
+    border: 0;
+    border-radius: 30px;
+    height: 32px;
+  }
+
+  &__search {
+    padding-inline: 8px;
+    border-radius: 27px;
+  }
+
+  &__text {
+    color: $color-header-text;
+
+    @include font($size: 1.4rem, $height: normal, $weight: 400);
+
+    @include media-tablet {
+      @include font($size: 1.2rem, $height: normal, $weight: 400);
+    }
   }
 }
