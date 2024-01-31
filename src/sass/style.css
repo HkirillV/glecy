@@ -73,23 +73,27 @@ a {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 1024px) {
-  .navigation {
-    justify-content: center;
-  }
-}
 .navigation-menu {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
-@media (max-width: 1024px) {
-  .navigation-menu {
+.navigation-menu__list {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  .navigation-menu__list {
     column-gap: 25px;
   }
 }
 .navigation-menu__logo {
   margin-right: 16px;
+}
+@media (max-width: 1280px) {
+  .navigation-menu__logo {
+    max-width: 120px;
+    height: 50px;
+  }
 }
 .navigation-menu__item {
   display: flex;
@@ -123,13 +127,21 @@ a {
 
 .navigation-button {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   column-gap: 16px;
 }
 @media (max-width: 1024px) {
   .navigation-button {
-    display: none;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 300px;
+    height: 350px;
+    background-color: #f5f5dc;
   }
 }
 .navigation-button__phone {
@@ -158,6 +170,11 @@ a {
   border-radius: 30px;
   height: 32px;
 }
+@media (max-width: 1024px) {
+  .navigation-button__item {
+    background-color: bisque;
+  }
+}
 .navigation-button__search {
   padding-inline: 8px;
   border-radius: 27px;
@@ -175,6 +192,42 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+}
+
+@media (max-width: 1024px) {
+  .burger-menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    top: 16px;
+    z-index: 5;
+    width: 30px;
+    height: 18px;
+  }
+  .burger-menu span,
+  .burger-menu::before,
+  .burger-menu::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transition: all 0.3s ease 0s;
+    background-color: #2D3440;
+  }
+  .burger-menu::before,
+  .burger-menu::after {
+    content: "";
+  }
+  .burger-menu::before {
+    top: 0;
+  }
+  .burger-menu::after {
+    bottom: 0;
+  }
+  .burger-menu span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
   }
 }
 

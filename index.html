@@ -10,30 +10,32 @@
 </head>
 <body>
 <div class="header">
-  <nav class="navigation container">
-    <div class="navigation-menu">
+  <div class="navigation container">
+    <nav class="navigation-menu">
       <a class="navigation-menu__logo" href="/">
         <img class="navigation-menu__logo-icon" src="./src/img/header/logo.svg" width="137" height="56" loading="lazy"
              alt="logo">
       </a>
-      <div class="navigation-menu__item">
-        <p class="navigation-menu__text">Каталог</p>
-        <button class="navigation-menu__catalog" type="button">
-          <img class="navigation-menu__catalog-icon" src="./src/img/header/Arrow-down.svg" width="16" height="17"
-               loading="lazy" alt="catalog-button">
-        </button>
-      </div>
-      <div class="navigation-menu__item">
-        <a class="navigation-menu__link" href="/">
-          <p class="navigation-menu__text">Доставка и оплата</p>
-        </a>
-      </div>
-      <div class="navigation-menu__item">
-        <a class="navigation-menu__link" href="/">
-          <p class="navigation-menu__text">О компании</p>
-        </a>
-      </div>
-    </div>
+      <ul class="navigation-menu__list">
+        <li class="navigation-menu__item">
+          <p class="navigation-menu__text">Каталог</p>
+          <button class="navigation-menu__catalog" type="button">
+            <img class="navigation-menu__catalog-icon" src="./src/img/header/Arrow-down.svg" width="16" height="17"
+                 loading="lazy" alt="catalog-button">
+          </button>
+        </li>
+        <li class="navigation-menu__item">
+          <a class="navigation-menu__link" href="/">
+            <p class="navigation-menu__text">Доставка и оплата</p>
+          </a>
+        </li>
+        <li class="navigation-menu__item">
+          <a class="navigation-menu__link" href="/">
+            <p class="navigation-menu__text">О компании</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div class="navigation-button">
       <a class="navigation-button__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
       <button class="navigation-button__item navigation-button__search" type="button">
@@ -52,10 +54,11 @@
       </button>
     </div>
     <div class="burger-menu">
-
+      <span></span>
     </div>
-  </nav>
+  </div>
 </div>
+<script src="./src/js/app.js"></script>
 <script type="module" src="/main.js"></script>
 </body>
 </html>
