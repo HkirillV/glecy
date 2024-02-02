@@ -14,6 +14,10 @@
       @include media-tablet {
         column-gap: 25px;
       }
+
+      @include media-mobile-s {
+        column-gap: 0;
+      }
     }
 
     &__logo {
@@ -21,6 +25,11 @@
 
       @include media-tablet {
         max-width: 120px;
+        height: 50px;
+      }
+
+      @include media-mobile-s {
+        max-width: 80px;
         height: 50px;
       }
     }
@@ -31,6 +40,10 @@
       align-items: center;
       height: 36px;
       padding-inline: 16px;
+
+      @include media-mobile-s {
+        padding-inline: 10px;
+      }
     }
 
     &__text {
@@ -40,6 +53,10 @@
 
       @include media-tablet {
         @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
+
+      @include media-mobile-s {
+        @include font($size: 1.2rem, $height: normal, $weight: 400);
       }
     }
 
@@ -92,6 +109,10 @@
     @include media-tablet {
       @include font($size: 1.4rem, $height: normal, $weight: 700);
     }
+
+    @include media-mobile-s {
+      @include font($size: 1.2rem, $height: normal, $weight: 700);
+    }
   }
 
   &__item {
@@ -123,6 +144,10 @@
     @include media-tablet {
 
       @include font($size: 1.2rem, $height: normal, $weight: 400);
+    }
+
+    @include media-mobile-s {
+      @include font($size: 1rem, $height: normal, $weight: 400);
     }
   }
 }
