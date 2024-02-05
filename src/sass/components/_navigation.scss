@@ -1,6 +1,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  position: relative;
 
 
   &-menu {
@@ -68,6 +69,7 @@
       gap: 6px;
     }
   }
+
 }
 
 
@@ -84,7 +86,7 @@
     position: fixed;
     right: -300px;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     visibility: hidden;
     transition: transform .5s, visibility .5s;
     will-change: transform;

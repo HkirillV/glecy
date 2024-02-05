@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+const header = document.querySelector('header')
 const burgerBtn = document.querySelector('.burger-btn')
 const navButton = document.querySelector('.navigation-burger-menu')
 
