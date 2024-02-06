@@ -11,6 +11,10 @@
   @media (max-width: $tablet) { @content; }
 }
 
+@mixin media-min-tablet-s {
+  @media (min-width: $tablet-s) { @content; }
+}
+
 @mixin media-tablet-s {
   @media (max-width: $tablet-s) { @content; }
 }

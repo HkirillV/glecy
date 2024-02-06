@@ -1,12 +1,28 @@
 .search {
   position: absolute;
+  visibility: hidden;
   top: 50px;
-  right: 235px;
+  right: 245px;
   padding: 24px 16px;
   border-radius: 4px;
   max-width: 356px;
   width: 100%;
   background-color: $color-form;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+
+  @include media-tablet {
+    right: 235px;
+    padding: 12px 12px;
+    max-width: 300px;
+  }
+
+  @include media-tablet-s {
+    top: 100px;
+  }
+
+    &.overlay-form {
+      visibility: visible;
+    }
 
 
 
@@ -22,12 +38,20 @@
       color: $color-header-text;
 
       @include font($size: 1.6rem, $height: normal, $weight: 400);
-    }
 
-    &.overlay-form {
-      visibility: visible;
+      @include media-tablet {
+        height: 40px;
+      }
     }
   }
+}
+
+.overlay-search {
+  background-color: $color-search;
+}
+
+.overlay-icon {
+  filter: brightness(0) invert(1);
 }
 
 
