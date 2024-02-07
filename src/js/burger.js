@@ -9,8 +9,8 @@ burgerBtn.addEventListener('click', function () {
   burgerBtn.classList.toggle('close')
   navButton.classList.toggle('overlay')
   if(!burgerBtn.classList.contains('close')) {
-    searchForm.classList.remove('overlay-form')
-    overlayIcon.classList.remove('overlay-icon')
+    searchForm.classList.remove('overlay-red')
+    overlayIcon.classList.remove('overlay-white')
     searchBtn.classList.remove('overlay-search')
   }
 })

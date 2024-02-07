@@ -79,6 +79,18 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
+  color: $color-header-text;
+
+  @include font($size: 1.4rem, $height: normal, $weight: 400);
+
+  @include media-tablet {
+
+    @include font($size: 1.2rem, $height: normal, $weight: 400);
+  }
+
+  @include media-mobile-s {
+    @include font($size: 1rem, $height: normal, $weight: 400);
+  }
 
 
   @include media-tablet-s {
@@ -140,18 +152,4 @@
     border-radius: 27px;
   }
 
-  &__text {
-    color: $color-header-text;
-
-    @include font($size: 1.4rem, $height: normal, $weight: 400);
-
-    @include media-tablet {
-
-      @include font($size: 1.2rem, $height: normal, $weight: 400);
-    }
-
-    @include media-mobile-s {
-      @include font($size: 1rem, $height: normal, $weight: 400);
-    }
-  }
 }

@@ -20,11 +20,6 @@
     top: 100px;
   }
 
-    &.overlay-form {
-      visibility: visible;
-    }
-
-
 
   &__form {
     &_input {
@@ -46,11 +41,16 @@
   }
 }
 
-.overlay-search {
+.overlay-form {
+  visibility: visible;
+}
+
+.overlay-red {
   background-color: $color-search;
 }
 
-.overlay-icon {
+.overlay-white {
+  color: #FCFCFC;
   filter: brightness(0) invert(1);
 }
 

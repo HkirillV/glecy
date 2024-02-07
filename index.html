@@ -38,18 +38,18 @@
     </nav>
     <div class="navigation-burger-menu">
       <a class="navigation-burger-menu__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
-      <button class="navigation-burger-menu__item navigation-button__search" type="button">
-        <img  class="navigation-burger-menu__icon" src="./src/img/header/search.svg" width="16" height="17"
+      <button class="navigation-burger-menu__item" id="search-button" type="button">
+        <img class="navigation-burger-menu__icon" src="./src/img/header/search.svg" width="16" height="17"
              loading="lazy"
              alt="search">
       </button>
-      <button class="navigation-burger-menu__item" type="button">
-        <img class="navigation-burger-menu__icon" src="./src/img/header/Log-in.svg" width="16" height="" loading="lazy"
+      <button class="navigation-burger-menu__item navigation-button__login" type="button">
+        <img class="navigation-burger-menu__icon" id="login-icon" src="./src/img/header/Log-in.svg" width="16" height="" loading="lazy"
              alt="вход">
-        <span class="navigation-burger-menu__text">Вход</span>
+        Вход
       </button>
       <button class="navigation-burger-menu__item" type="button">
-        <img class="navigation-burger-menu__icon" src="./src/img/header/Cart.svg" width="16" height="17" loading="lazy"
+        <img class="navigation-burger-menu__icon" id="basket" src="./src/img/header/Cart.svg" width="16" height="17" loading="lazy"
              alt="card">
         <span class="navigation-burger-menu__text"> 2 товара</span>
       </button>
@@ -57,6 +57,20 @@
         <form class="search__form">
           <input class="search__form_input" type="search" value="" placeholder="Поиск по сайту">
         </form>
+      </div>
+      <div class="authorization">
+        <h4 class="authorization__title">Личный кабинет</h4>
+        <form class="authorization__form">
+          <input class="authorization__input" type="email" placeholder="Логин">
+          <input class="authorization__input" type="password" placeholder="Пароль">
+        </form>
+        <div class="authorization__button">
+          <button class="button" type="button">Войти</button>
+          <div class="authorization__button-link">
+            <a class="authorization__link" href="/">Забыли пароль?</a>
+            <a class="authorization__link" href="/">Регистрация</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

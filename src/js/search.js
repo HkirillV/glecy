@@ -1,21 +1,20 @@
+import {overlayForm} from "./function.js";
+import {removeForm} from "./function.js";
+
 const body = document.querySelector('body')
-const searchBtn = document.querySelector('.navigation-button__search')
+const searchBtn = document.querySelector('#search-button')
 const overlayIcon = document.querySelector('.navigation-burger-menu__icon')
 const searchForm = document.querySelector('.search')
 
 
 searchBtn.addEventListener('click', function () {
-  searchForm.classList.toggle('overlay-form')
-  searchBtn.classList.toggle('overlay-search')
-  overlayIcon.classList.toggle('overlay-icon')
+  overlayForm(searchForm, searchBtn, overlayIcon)
 })
 
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    searchForm.classList.remove('overlay-form')
-    searchBtn.classList.remove('overlay-search')
-    overlayIcon.classList.remove('overlay-icon')
+    removeForm(searchForm, searchBtn, overlayIcon)
   }
 })
 
@@ -31,7 +30,5 @@ searchForm.addEventListener('click', (event) => {
 
 body.addEventListener('click', (event) => {
   if (event._isClickWidthInMenu) return;
-  searchForm.classList.remove('overlay-form')
-  searchBtn.classList.remove('overlay-search')
-  overlayIcon.classList.remove('overlay-icon')
+  removeForm(searchForm, searchBtn, overlayIcon)
 })
