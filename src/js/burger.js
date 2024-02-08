@@ -11,7 +11,7 @@ burgerBtn.addEventListener('click', function () {
   if(!burgerBtn.classList.contains('close')) {
     searchForm.classList.remove('overlay-red')
     overlayIcon.classList.remove('overlay-white')
-    searchBtn.classList.remove('overlay-search')
+    searchBtn.classList.remove('overlay-form')
   }
 })
 

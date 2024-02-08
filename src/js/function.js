@@ -1,12 +1,14 @@
 
-export const overlayForm = (overlayForm, overlayRed, overlayWhite) => {
+export const overlayForm = (overlayForm, overlayColorRed, overlayColorWhite, overlayColorText) => {
   overlayForm.classList.toggle('overlay-form')
-  overlayRed.classList.toggle('overlay-red')
-  overlayWhite.classList.toggle('overlay-white')
+  overlayColorRed.classList.toggle('overlay-red')
+  overlayColorWhite.classList.toggle('overlay-white')
+  overlayColorText.classList.toggle('overlay-white')
 }
 
-export const removeForm = (removeForm, removeRed, removeWhite) => {
+export const removeForm = (removeForm, removeColorRed, removeColorWhite, overlayColorText) => {
   removeForm.classList.remove('overlay-form')
-  removeRed.classList.remove('overlay-red')
-  removeWhite.classList.remove('overlay-white')
+  removeColorRed.classList.remove('overlay-red')
+  removeColorWhite.classList.remove('overlay-white')
+  overlayColorText.classList.remove('overlay-white')
 }

@@ -5,6 +5,10 @@ const body = document.querySelector('body')
 const searchBtn = document.querySelector('#search-button')
 const overlayIcon = document.querySelector('.navigation-burger-menu__icon')
 const searchForm = document.querySelector('.search')
+const authorizationForm = document.querySelector('.authorization')
+const loginBtn = document.querySelector('.navigation-button__login')
+const overlayColorText = document.querySelector('.navigation-burger-menu__text')
+
 
 
 searchBtn.addEventListener('click', function () {
@@ -32,3 +36,4 @@ body.addEventListener('click', (event) => {
   if (event._isClickWidthInMenu) return;
   removeForm(searchForm, searchBtn, overlayIcon)
 })
+
