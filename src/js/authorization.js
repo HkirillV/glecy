@@ -2,20 +2,28 @@ import {overlayForm} from "./function.js";
 import {removeForm} from "./function.js";
 
 const body = document.querySelector('body')
-const overlayIcon = document.querySelector('.icon-white')
+const overlayColorIcon = document.querySelector('.icon-white')
 const overlayColorText = document.querySelector('.navigation-burger-menu__text')
 const loginBtn = document.querySelector('.navigation-button__login')
 const authorizationForm = document.querySelector('.authorization')
 
+//search
+const searchForm = document.querySelector('.search')
+const searchBtn = document.querySelector('#search-button')
+const overlayIcon = document.querySelector('.navigation-burger-menu__icon')
+
+
+
 
 loginBtn.addEventListener('click', function () {
-  overlayForm(authorizationForm, loginBtn, overlayIcon, overlayColorText)
+  overlayForm(authorizationForm, loginBtn, overlayColorIcon, overlayColorText)
+  removeForm(searchForm, searchBtn, overlayIcon, overlayIcon)
 })
 
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    removeForm(authorizationForm, loginBtn, overlayIcon, overlayColorText)
+    removeForm(authorizationForm, loginBtn, overlayColorIcon, overlayColorText)
   }
 })
 
@@ -31,5 +39,5 @@ authorizationForm.addEventListener('click', (event) => {
 
 body.addEventListener('click', (event) => {
   if (event._isClickWidthInMenu) return;
-  removeForm(authorizationForm, loginBtn, overlayIcon, overlayColorText)
+  removeForm(authorizationForm, loginBtn, overlayColorIcon, overlayColorText)
 })

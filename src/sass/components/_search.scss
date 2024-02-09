@@ -49,9 +49,12 @@
   background-color: $color-search;
 }
 
-.overlay-white {
+.overlay-white-icon {
   filter: brightness(0) invert(1);
-  color: #FCFCFC;
+}
+
+.overlay-white-text {
+  color: $color-form;
 }
 
 

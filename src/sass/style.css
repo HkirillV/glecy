@@ -502,8 +502,11 @@ button:hover {
   background-color: #FF4A78;
 }
 
-.overlay-white {
+.overlay-white-icon {
   filter: brightness(0) invert(1);
+}
+
+.overlay-white-text {
   color: #FCFCFC;
 }
 
