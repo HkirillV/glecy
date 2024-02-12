@@ -510,4 +510,17 @@ button:hover {
   color: #FCFCFC;
 }
 
+.basket {
+  position: absolute;
+  visibility: hidden;
+  top: 55px;
+  right: 12px;
+  border-radius: 4px;
+  height: 382px;
+  max-width: 445px;
+  width: 100%;
+  background-color: #FCFCFC;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+}
+
 /*# sourceMappingURL=style.css.map */
