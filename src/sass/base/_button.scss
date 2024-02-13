@@ -2,10 +2,10 @@
   padding-inline: 32px;
   height: 44px;
   border-radius: 26px;
-  color: $color-form;
+  color: $basic-extra-light;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.10);
   border: 4px rgba(255, 47, 100, 0.30) solid;
-  background-color: $color-button;
+  background-color: $special-extra-bright;
 
   @include font($size: 1.6rem, $height: normal, $weight: 400);
 }

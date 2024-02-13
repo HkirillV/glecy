@@ -3,11 +3,12 @@
   visibility: hidden;
   top: 50px;
   right: 245px;
+  z-index: 10;
   padding: 24px 16px;
   border-radius: 4px;
   max-width: 356px;
   width: 100%;
-  background-color: $color-form;
+  background-color: $basic-extra-light;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
 
   @include media-tablet {
@@ -29,8 +30,8 @@
       max-width: 324px;
       width: 100%;
       border-radius: 4px;
-      border: 1px solid $color-border-form;
-      color: $color-header-text;
+      border: 1px solid $basic-neutral;
+      color: $basic-extra-dark;
 
       @include font($size: 1.6rem, $height: normal, $weight: 400);
 
@@ -46,7 +47,7 @@
 }
 
 .overlay-red {
-  background-color: $color-search;
+  background-color: $special-bright;
 }
 
 .overlay-white-icon {
@@ -54,7 +55,7 @@
 }
 
 .overlay-white-text {
-  color: $color-form;
+  color: $basic-extra-light;
 }
 
 

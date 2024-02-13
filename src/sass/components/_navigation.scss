@@ -48,7 +48,7 @@
     }
 
     &__text {
-      color: $color-header-text;
+      color:$basic-extra-dark;
 
       @include font($size: 1.6rem, $height: normal, $weight: 400);
 
@@ -65,7 +65,7 @@
       display: flex;
       align-items: center;
       border: 0;
-      background-color: $background-body;
+      background-color: $special-light;
       gap: 6px;
     }
   }
@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
-  color: $color-header-text;
+  color: $basic-extra-dark;
 
   @include font($size: 1.4rem, $height: normal, $weight: 400);
 
@@ -118,7 +118,7 @@
 
 
   &__phone {
-    color: $color-header-text;
+    color: $basic-extra-dark;
 
     @include font($size: 1.6rem, $height: normal, $weight: 700);
 
@@ -136,7 +136,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 6px;
-    background-color: $color-extra-light-icon;
+    background-color: $basic-extra-light-icon;
     padding-inline: 16px;
     border: 0;
     border-radius: 30px;

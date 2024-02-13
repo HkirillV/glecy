@@ -84,20 +84,46 @@
     <span></span>
   </div>
 </div>
-  <section class="swiper container">
+<section class="slider container">
+  <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      ...
+      <div class="swiper-slide">
+        <div class="swiper-slide__content">
+          <h1 class="swiper-slide__title">Нежный пломбир <br>
+            с клубничным джемом</h1>
+          <p class="swiper-slide__text">Натуральное мороженое из свежих сливок
+            и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
+          <button class="swiper-slide__button button" type="button">Заказать</button>
+        </div>
+        <img src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__content">
+          <h3 class="swiper-slide__title">Сливочное мороженое <br> со вкусом банана</h3>
+          <p class="swiper-slide__text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
+            даже в самый жаркий летний день. </p>
+          <button class="swiper-slide__button button" type="button">Заказать</button>
+        </div>
+        <img src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__content">
+          <h3 class="swiper-slide__title">Карамельный пломбир <br>
+            с маршмеллоу</h3>
+          <p class="swiper-slide__text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
+            сердца сладкоежек всех возрастов.</p>
+          <button class="swiper-slide__button button" type="button">Заказать</button>
+        </div>
+        <img src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
+      </div>
     </div>
     <div class="swiper-pagination"></div>
 
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
-
-    <div class="swiper-scrollbar"></div>
-  </section>
+  </div>
+</section>
+<script src="./src/js/swiper/swiper-bundle.min.js"></script>
 <script type="module" src="./main.js" defer></script>
 </body>
 </html>

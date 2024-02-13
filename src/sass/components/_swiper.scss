@@ -1,0 +1,81 @@
+.swiper {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.swiper-slide {
+  display: flex;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0 138px 70px;
+    margin-right: 20px;
+    width: 505px;
+    max-width: 100%;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+
+    @include font($size: 3.6rem, $height: normal, $weight: 900);
+  }
+
+  &__text {
+    padding-bottom: 48px;
+
+    @include font($size: 1.8rem, $height: normal, $weight: 400);
+  }
+
+  &__button {
+    padding-inline: 32px;
+    width: 139px;
+    max-width: 100%;
+    color: $basic-extra-dark;
+    background-color: $basic-extra-light;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 700);
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  background-color: $basic-extra-light-icon;
+  border: 2px solid $basic-extra-light;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.swiper-button-prev {
+  left: 44%;
+}
+
+.swiper-button-next {
+  right: 25%;
+}
+
+
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: $basic-extra-light;
+  font-size: 10px;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: flex-start;
+
+  &-bullet {
+    background-color: $basic-extra-light;
+    width: 12px;
+    height: 12px;
+  }
+
+  &-bullet-active {
+    background-color: $basic-extra-light;
+  }
+}
+
+
+
+
