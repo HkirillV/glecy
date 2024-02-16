@@ -1,0 +1,92 @@
+.gift {
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 55px;
+    color: $basic-extra-dark;
+
+    @include font($size: 3.2rem, $height: normal, $weight: 900);
+
+    @include media-mobile-s {
+
+      @include font($size: 2.8rem, $height: normal, $weight: 900);
+    }
+  }
+}
+
+
+.cart-banner {
+  display: flex;
+  column-gap: 30px;
+
+  @include media-tablet-s {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 16px;
+  background-color: $special-neutral;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+    padding: 36px 0 36px 36px;
+  }
+
+  &__title {
+
+    color: $basic-extra-dark;
+
+    @include font($size: 2.4rem, $height: normal, $weight: 700);
+
+    @include media-mobile-s {
+
+      @include font($size: 2rem, $height: normal, $weight: 700);
+    }
+  }
+
+  &__text {
+
+    color: $basic-extra-dark;
+    @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+    @include media-mobile-s {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
+  }
+
+  &__button {
+    height: 44px;
+    width: 176px;
+    max-width: 100%;
+    border-radius: 26px;
+    color: $basic-extra-dark;
+    background-color: $basic-extra-light;
+    box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+    border: 4px rgba(255, 47, 100, 0.40) solid;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 700);
+
+    @include media-mobile-s {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 700);
+    }
+  }
+
+  &__image {
+
+    @include media-mobile-s {
+      width: 150px;
+      height: 180px;
+    }
+  }
+
+}

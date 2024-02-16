@@ -1,7 +1,6 @@
 .swiper {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .swiper-slide {
@@ -29,7 +28,6 @@
   }
 
   &__button {
-    padding-inline: 32px;
     width: 139px;
     max-width: 100%;
     color: $basic-extra-dark;

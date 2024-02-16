@@ -40,7 +40,7 @@
     <div class="navigation-burger-menu">
       <a class="navigation-burger-menu__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
       <button class="navigation-burger-menu__item" id="search-button" type="button">
-        <img class="navigation-burger-menu__icon" src="./src/img/header/search.svg" width="16" height="17"
+        <img class="navigation-burger-menu__icon" src="./src/img/header/Search.svg" width="16" height="17"
              loading="lazy"
              alt="search">
       </button>
@@ -84,45 +84,138 @@
     <span></span>
   </div>
 </div>
-<section class="slider container">
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swiper-slide__content">
-          <h1 class="swiper-slide__title">Нежный пломбир <br>
-            с клубничным джемом</h1>
-          <p class="swiper-slide__text">Натуральное мороженое из свежих сливок
-            и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
-          <button class="swiper-slide__button button" type="button">Заказать</button>
+<main class="container">
+  <h1 class="visually-hidden">Магазин мороженного «Глейси»</h1>
+  <section class="promo">
+    <h2 class="visually-hidden">Промо-предложения мороженного</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-slide__content">
+            <h3 class="swiper-slide__title">Нежный пломбир <br>
+              с клубничным джемом</h3>
+            <p class="swiper-slide__text">Натуральное мороженое из свежих сливок
+              и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
+            <button class="swiper-slide__button button" type="button">Заказать</button>
+          </div>
+          <img src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
         </div>
-        <img src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
+        <div class="swiper-slide">
+          <div class="swiper-slide__content">
+            <h3 class="swiper-slide__title">Сливочное мороженое <br> со вкусом банана</h3>
+            <p class="swiper-slide__text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
+              наслаждение
+              даже в самый жаркий летний день. </p>
+            <button class="swiper-slide__button button" type="button">Заказать</button>
+          </div>
+          <img src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide__content">
+            <h3 class="swiper-slide__title">Карамельный пломбир <br>
+              с маршмеллоу</h3>
+            <p class="swiper-slide__text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
+              сердца сладкоежек всех возрастов.</p>
+            <button class="swiper-slide__button button" type="button">Заказать</button>
+          </div>
+          <img src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
+        </div>
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-slide__content">
-          <h3 class="swiper-slide__title">Сливочное мороженое <br> со вкусом банана</h3>
-          <p class="swiper-slide__text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
-            даже в самый жаркий летний день. </p>
-          <button class="swiper-slide__button button" type="button">Заказать</button>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <section class="gift">
+    <h2 class="gift__title">Заказывайте мороженое <br> и получайте подарки!</h2>
+    <div class="cart-banner">
+      <div class="banner">
+        <div class="banner__content">
+          <h4 class="banner__title">Малинка даром!</h4>
+          <p class="banner__text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового
+            варенья бесплатно.</p>
+          <button class="banner__button" type="button">Хочу подарок</button>
         </div>
-        <img src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
+        <img class="banner__image" src="./src/img/promo/photo_2.svg" width="219" height="268" loading="lazy"
+             alt="подарок">
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-slide__content">
-          <h3 class="swiper-slide__title">Карамельный пломбир <br>
-            с маршмеллоу</h3>
-          <p class="swiper-slide__text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
-            сердца сладкоежек всех возрастов.</p>
-          <button class="swiper-slide__button button" type="button">Заказать</button>
+      <div class="banner">
+        <div class="banner__content">
+          <h4 class="banner__title">Маршмеллоу даром!</h4>
+          <p class="banner__text">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно
+            бесплатно.</p>
+          <button class="banner__button" type="button">Хочу подарок</button>
         </div>
-        <img src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
+        <img class="banner__image" src="./src/img/promo/photo_1.svg" width="219" height="268" loading="lazy"
+             alt="подарок">
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
+  </section>
+  <section class="catalog">
+    <h2 class="catalog__title">Попробуйте самые популярные <br> вкусы нашего мороженого</h2>
+    <div class="list">
+      <div class="list-card">
+        <img class="list-card__image" src="./src/img/catalog/малина.svg" width="168" height="168" loading="lazy"
+             alt="малинка">
+        <div class="list-card__description">
+          <h4 class="list-card__title">Малинка</h4>
+          <p class="list-card__text">Сливочное мороженое <br> с малиновым джемом</p>
+          <div class="price">
+            <p class="price__text">310 ₽/кг</p>
+            <button class="price__button" type="button">
+              <img src="./src/img/catalog/Cart.svg" width="16" height="16" loading="lazy" alt="/">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="list-card">
+        <img class="list-card__image" src="./src/img/catalog/фисташка.svg" width="168" height="168" loading="lazy"
+             alt="фисташка">
+        <div class="list-card__description">
+          <h4 class="list-card__title">Фисташка</h4>
+          <p class="list-card__text">Фисташковый пломбир <br> с кусочками шоколада</p>
+          <div class="price">
+            <p class="price__text">340 ₽/кг</p>
+            <button class="price__button" type="button">
+              <img src="./src/img/catalog/Cart.svg" width="16" height="16" loading="lazy" alt="/">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="list-card">
+        <img class="list-card__image" src="./src/img/catalog/черника.svg" width="168" height="168" loading="lazy"
+             alt="черника">
+        <div class="list-card__description">
+          <h4 class="list-card__title">Черника</h4>
+          <p class="list-card__text">Крем-брюле <br>
+            с черничным джемом</p>
+          <div class="price">
+            <p class="price__text">330 ₽/кг</p>
+            <button class="price__button" type="button">
+              <img src="./src/img/catalog/Cart.svg" width="16" height="16" loading="lazy" alt="/">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="list-card">
+        <img class="list-card__image" src="./src/img/catalog/бабл-гам.svg" width="168" height="168" loading="lazy"
+             alt="бабл-гам">
+        <div class="list-card__description">
+          <h4 class="list-card__title">Бабл-гам</h4>
+          <p class="list-card__text">Ванильный пломбир <br>
+            со сладкой посыпкой</p>
+          <div class="price">
+            <p class="price__text">320 ₽/кг</p>
+            <button class="price__button" type="button">
+              <img src="./src/img/catalog/Cart.svg" width="16" height="16" loading="lazy" alt="/">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <script src="./src/js/swiper/swiper-bundle.min.js"></script>
 <script type="module" src="./main.js" defer></script>
 </body>

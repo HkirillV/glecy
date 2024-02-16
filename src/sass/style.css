@@ -76,6 +76,23 @@ button:hover {
   cursor: pointer;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+section {
+  padding-bottom: 80px;
+}
+
 .container {
   max-width: 1190px;
   width: 100%;
@@ -84,7 +101,6 @@ button:hover {
 }
 
 .button {
-  padding-inline: 32px;
   height: 44px;
   border-radius: 26px;
   color: #fcfcfc;
@@ -528,7 +544,6 @@ button:hover {
 .swiper {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .swiper-slide {
@@ -557,7 +572,6 @@ button:hover {
   line-height: normal;
 }
 .swiper-slide__button {
-  padding-inline: 32px;
   width: 139px;
   max-width: 100%;
   color: #2d3440;
@@ -599,6 +613,181 @@ button:hover {
 }
 .swiper-pagination-bullet-active {
   background-color: #fcfcfc;
+}
+
+.gift__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 55px;
+  color: #2d3440;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .gift__title {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+
+.cart-banner {
+  display: flex;
+  column-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .cart-banner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 16px;
+  background-color: #f79;
+}
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  padding: 36px 0 36px 36px;
+}
+.banner__title {
+  color: #2d3440;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .banner__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.banner__text {
+  color: #2d3440;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .banner__text {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.banner__button {
+  height: 44px;
+  width: 176px;
+  max-width: 100%;
+  border-radius: 26px;
+  color: #2d3440;
+  background-color: #fcfcfc;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+  border: 4px rgba(255, 47, 100, 0.4) solid;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .banner__button {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media (max-width: 640px) {
+  .banner__image {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+.catalog__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 107px;
+  color: #2d3440;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 270px;
+  grid-template-rows: 332px;
+}
+
+.list-card {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  position: relative;
+  height: 281px;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
+.list-card__image {
+  position: absolute;
+  top: -51px;
+}
+.list-card__description {
+  text-align: center;
+  padding: 0 40px 20px;
+}
+.list-card__title {
+  padding-bottom: 8px;
+  color: #2d3440;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.list-card__text {
+  text-align: center;
+  padding-bottom: 16px;
+  color: #565c66;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.price__button {
+  text-align: center;
+  border: none;
+  border-radius: 26px;
+  padding: 8px 11px;
+  color: #fcfcfc;
+  background-color: #ff2f64;
+}
+.price__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
