@@ -90,7 +90,7 @@ button:hover {
 }
 
 section {
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .container {
@@ -506,6 +506,14 @@ section {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .search__form_input {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 @media (max-width: 1280px) {
   .search__form_input {
     height: 40px;
@@ -564,12 +572,36 @@ section {
   font-weight: 900;
   line-height: normal;
 }
+@media (max-width: 1024px) {
+  .swiper-slide__title {
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .swiper-slide__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
 .swiper-slide__text {
   padding-bottom: 48px;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .swiper-slide__text {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 .swiper-slide__button {
   width: 139px;
@@ -580,6 +612,14 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .swiper-slide__button {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -626,9 +666,17 @@ section {
   font-weight: 900;
   line-height: normal;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .gift__title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .gift__title {
+    font-size: 2rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -728,11 +776,27 @@ section {
   font-weight: 900;
   line-height: normal;
 }
+@media (max-width: 1024px) {
+  .catalog__title {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
 
 .list {
   display: grid;
-  grid-template-columns: 270px;
-  grid-template-rows: 332px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 80px 30px;
 }
 
 .list-card {
@@ -751,7 +815,7 @@ section {
 }
 .list-card__description {
   text-align: center;
-  padding: 0 40px 20px;
+  padding-bottom: 20px;
 }
 .list-card__title {
   padding-bottom: 8px;
@@ -760,6 +824,14 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .list-card__title {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 .list-card__text {
   text-align: center;
@@ -770,10 +842,19 @@ section {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .list-card__text {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 
 .price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .price__button {
   text-align: center;
@@ -788,6 +869,80 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .price__text {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.description {
+  border-radius: 16px;
+}
+.description__content {
+  padding: 24px;
+  border: 24px solid green;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.description__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-block: 56px;
+  color: #2d3440;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .description__title {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .description__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+.description__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 45%));
+  grid-gap: 40px 32px;
+}
+@media (max-width: 920px) {
+  .description__list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 80%));
+  }
+}
+.description__item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+  color: #565c66;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .description__item {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

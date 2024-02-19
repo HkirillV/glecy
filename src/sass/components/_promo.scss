@@ -9,9 +9,14 @@
 
     @include font($size: 3.2rem, $height: normal, $weight: 900);
 
-    @include media-mobile-s {
+    @include media-tablet-s {
 
-      @include font($size: 2.8rem, $height: normal, $weight: 900);
+      @include font($size: 2.4rem, $height: normal, $weight: 900);
+    }
+
+    @include media-tablet-xxs {
+
+      @include font($size: 2rem, $height: normal, $weight: 900);
     }
   }
 }

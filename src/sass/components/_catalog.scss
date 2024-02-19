@@ -6,12 +6,22 @@
   color: $basic-extra-dark;
 
   @include font($size: 3.2rem, $height: normal, $weight: 900);
+
+  @include media-tablet-s {
+
+    @include font($size: 2.4rem, $height: normal, $weight: 900);
+  }
+
+  @include media-tablet-xxs {
+
+    @include font($size: 2rem, $height: normal, $weight: 900);
+  }
 }
 
 .list {
   display: grid;
-  grid-template-columns: 270px;
-  grid-template-rows: 332px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 80px 30px;
 
 }
 
@@ -32,7 +42,7 @@
 
   &__description {
     text-align: center;
-    padding: 0  40px 20px;
+    padding-bottom: 20px;
   }
 
   &__title {
@@ -40,6 +50,11 @@
     color: $basic-extra-dark;
 
     @include font($size: 2rem, $height: normal, $weight: 700);
+
+    @include media-tablet-xxs {
+
+      @include font($size: 1.8rem, $height: normal, $weight: 700);
+    }
   }
 
   &__text {
@@ -48,6 +63,11 @@
     color: $basic-dark;
 
     @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+    @include media-tablet-xxs {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
   }
 
 }
@@ -55,6 +75,7 @@
 .price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__button {
     text-align: center;
@@ -67,5 +88,10 @@
 
   &__text {
     @include font($size: 2rem, $height: normal, $weight: 700);
+
+    @include media-tablet-xxs {
+
+      @include font($size: 1.8rem, $height: normal, $weight: 700);
+    }
   }
 }
