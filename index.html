@@ -86,9 +86,9 @@
 </div>
 <main class="container">
   <h1 class="visually-hidden">Магазин мороженного «Глейси»</h1>
-  <section class="promo">
+  <section class="promo-swiper">
     <h2 class="visually-hidden">Промо-предложения мороженного</h2>
-    <div class="swiper">
+    <div class="swiper promo-main-slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="swiper-slide__content">
@@ -98,7 +98,7 @@
               и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
-          <img src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
+          <img class="swiper-slide__image" src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide__content">
@@ -108,7 +108,7 @@
               даже в самый жаркий летний день. </p>
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
-          <img src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
+          <img class="swiper-slide__image" src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide__content">
@@ -118,13 +118,26 @@
               сердца сладкоежек всех возрастов.</p>
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
-          <img src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
+          <img class="swiper-slide__image" src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
         </div>
       </div>
       <div class="swiper-pagination"></div>
 
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper promo-secondary-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./src/img/swiper/Банан.svg" width="100" height="150" loading="lazy" alt="банан">
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/swiper/Карамель.svg" width="100" height="150" loading="lazy" alt="карамель">
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/swiper/Джем.svg" width="100" height="150" loading="lazy" alt="джем">
+        </div>
+      </div>
     </div>
   </section>
   <section class="gift">

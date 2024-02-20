@@ -1,43 +1,43 @@
-import {overlayForm} from "./function.js";
-import {removeForm} from "./function.js";
+import {overlayFormElement} from "./function.js";
+import {removeFormElement} from "./function.js";
 
-const body = document.querySelector('body')
-const searchBtn = document.querySelector('#search-button')
-const overlayIcon = document.querySelector('.navigation-burger-menu__icon')
-const overlayColorIcon = document.querySelector('.icon-white')
-const searchForm = document.querySelector('.search')
+const bodyElement = document.querySelector('body')
+const searchBtnElement = document.querySelector('#search-button')
+const overlayIconElement = document.querySelector('.navigation-burger-menu__icon')
+const overlayColorIconElement = document.querySelector('.icon-white')
+const searchFormElement = document.querySelector('.search')
 
 //authorization
-const authorizationForm = document.querySelector('.authorization')
-const loginBtn = document.querySelector('.navigation-button__login')
-const overlayColorText = document.querySelector('.navigation-burger-menu__text')
+const authorizationFormElement = document.querySelector('.authorization')
+const loginBtnElement = document.querySelector('.navigation-button__login')
+const overlayColorTextElement = document.querySelector('.navigation-burger-menu__text')
 
 
 
-searchBtn.addEventListener('click', function () {
-  overlayForm(searchForm, searchBtn, overlayIcon, overlayIcon )
-  removeForm(authorizationForm, loginBtn, overlayColorIcon, overlayColorText)
+searchBtnElement.addEventListener('click', function () {
+  overlayFormElement(searchFormElement, searchBtnElement, overlayIconElement, overlayIconElement )
+  removeFormElement(authorizationFormElement, loginBtnElement, overlayColorIconElement, overlayColorTextElement)
 })
 
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    removeForm(searchForm, searchBtn, overlayIcon, overlayIcon)
+    removeFormElement(searchFormElement, searchBtnElement, overlayIconElement, overlayIconElement)
   }
 })
 
 
-searchBtn.addEventListener('click', (event) => {
+searchBtnElement.addEventListener('click', (event) => {
   event._isClickWidthInMenu = true
 });
 
-searchForm.addEventListener('click', (event) => {
+searchFormElement.addEventListener('click', (event) => {
   event._isClickWidthInMenu = true
 })
 
 
-body.addEventListener('click', (event) => {
+bodyElement.addEventListener('click', (event) => {
   if (event._isClickWidthInMenu) return;
-  removeForm(searchForm, searchBtn, overlayIcon, overlayIcon)
+  removeFormElement(searchFormElement, searchBtnElement, overlayIconElement, overlayIconElement)
 })
 

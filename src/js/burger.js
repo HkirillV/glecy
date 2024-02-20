@@ -1,40 +1,40 @@
-const body = document.querySelector('body')
-const burgerBtn = document.querySelector('.burger-btn')
-const navButton = document.querySelector('.navigation-burger-menu')
-const searchForm = document.querySelector('.search')
-const searchBtn = document.querySelector('.navigation-button__search')
-const overlayIcon = document.querySelector('.navigation-burger-menu__icon')
+const bodyElement = document.querySelector('body')
+const burgerBtnElement = document.querySelector('.burger-btn')
+const navButtonElement = document.querySelector('.navigation-burger-menu')
+const searchFormElement = document.querySelector('.search')
+const searchBtnElement = document.querySelector('.navigation-button__search')
+const overlayIconElement = document.querySelector('.navigation-burger-menu__icon')
 
-burgerBtn.addEventListener('click', function () {
-  burgerBtn.classList.toggle('close')
-  navButton.classList.toggle('overlay')
-  if(!burgerBtn.classList.contains('close')) {
-    searchForm.classList.remove('overlay-red')
-    overlayIcon.classList.remove('overlay-white')
-    searchBtn.classList.remove('overlay-form')
+burgerBtnElement.addEventListener('click', function () {
+  burgerBtnElement.classList.toggle('close')
+  navButtonElement.classList.toggle('overlay')
+  if(!burgerBtnElement.classList.contains('close')) {
+    searchFormElement.classList.remove('overlay-red')
+    overlayIconElement.classList.remove('overlay-white')
+    searchBtnElement.classList.remove('overlay-form')
   }
 })
 
 //Закрыть меню при нажатии на Esc
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    navButton.classList.remove('overlay')
-    burgerBtn.classList.remove('close')
+    navButtonElement.classList.remove('overlay')
+    burgerBtnElement.classList.remove('close')
   }
 })
 
 //Закрыть меню при клике вне его
-navButton.addEventListener('click', (event) => {
+navButtonElement.addEventListener('click', (event) => {
   event._isClickWidthInMenu = true
 });
 
-burgerBtn.addEventListener('click', (event) => {
+burgerBtnElement.addEventListener('click', (event) => {
   event._isClickWidthInMenu = true
 })
 
-body.addEventListener('click', (event) => {
+bodyElement.addEventListener('click', (event) => {
    if (event._isClickWidthInMenu) return;
 
-  navButton.classList.remove('overlay')
-  burgerBtn.classList.remove('close')
+  navButtonElement.classList.remove('overlay')
+  burgerBtnElement.classList.remove('close')
 })
