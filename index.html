@@ -17,12 +17,13 @@
         <img class="navigation-menu__logo-icon" src="./src/img/header/logo.svg" width="137" height="56" loading="lazy"
              alt="logo">
       </a>
-      <ul class="navigation-menu__list">
+      <ul class="navigation-menu__list visually-hidden-mobile">
         <li class="navigation-menu__item">
-          <p class="navigation-menu__text">Каталог</p>
           <button class="navigation-menu__catalog" type="button">
-            <img class="navigation-menu__catalog-icon" src="./src/img/header/Arrow-down.svg" width="16" height="17"
-                 loading="lazy" alt="catalog-button">
+            <p class="navigation-menu__text">Каталог</p>
+            <svg class="navigation-menu__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80812 1.05317C1.54777 0.792823 1.12566 0.792823 0.865306 1.05317C0.604957 1.31352 0.604957 1.73563 0.865306 1.99598L5.52565 6.65633C5.52771 6.65844 5.52979 6.66055 5.53189 6.66265C5.66259 6.79334 5.83404 6.85843 6.00534 6.85791C6.1753 6.85741 6.34511 6.79233 6.47478 6.66265C6.47687 6.66056 6.47894 6.65847 6.48099 6.65636L11.1414 1.99598C11.4017 1.73563 11.4017 1.31352 11.1414 1.05317C10.881 0.792823 10.4589 0.792823 10.1986 1.05317L6.00334 5.24839L1.80812 1.05317Z" fill="#2D3440" />
+            </svg>
           </button>
         </li>
         <li class="navigation-menu__item">
@@ -99,6 +100,7 @@
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
           <img class="swiper-slide__image" src="./src/img/swiper/Джем.svg" width="329" height="507" loading="lazy" alt="джем">
+          <span class="swiper-slide__image-background"></span>
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide__content">
@@ -109,6 +111,7 @@
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
           <img class="swiper-slide__image" src="./src/img/swiper/Банан.svg" width="312" height="507" loading="lazy" alt="банан">
+          <span class="swiper-slide__image-background"></span>
         </div>
         <div class="swiper-slide">
           <div class="swiper-slide__content">
@@ -119,6 +122,7 @@
             <button class="swiper-slide__button button" type="button">Заказать</button>
           </div>
           <img class="swiper-slide__image" src="./src/img/swiper/Карамель.svg" width="350" height="507" loading="lazy" alt="карамель">
+          <span class="swiper-slide__image-background"></span>
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -129,13 +133,16 @@
     <div class="swiper promo-secondary-slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./src/img/swiper/Банан.svg" width="100" height="150" loading="lazy" alt="банан">
+          <img class="promo-secondary-slider__image" src="./src/img/swiper/Банан.svg" width="100" height="150" loading="lazy" alt="банан">
+          <span class="promo-secondary-slider__image-background"></span>
         </div>
         <div class="swiper-slide">
-          <img src="./src/img/swiper/Карамель.svg" width="100" height="150" loading="lazy" alt="карамель">
+          <img class="promo-secondary-slider__image" src="./src/img/swiper/Карамель.svg" width="100" height="150" loading="lazy" alt="карамель">
+          <span class="promo-secondary-slider__image-background"></span>
         </div>
         <div class="swiper-slide">
-          <img src="./src/img/swiper/Джем.svg" width="100" height="150" loading="lazy" alt="джем">
+          <img class="promo-secondary-slider__image"  src="./src/img/swiper/Джем.svg" width="100" height="150" loading="lazy" alt="джем">
+          <span class="promo-secondary-slider__image-background"></span>
         </div>
       </div>
     </div>

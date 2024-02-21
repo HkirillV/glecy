@@ -8,6 +8,11 @@
     display: flex;
     align-items: center;
 
+    @include media-mobile-xs {
+
+      align-items: flex-start;
+    }
+
     &__list {
       display: flex;
       align-items: center;
@@ -64,12 +69,27 @@
     &__catalog {
       display: flex;
       align-items: center;
+      height: 20px;
       border: 0;
       background-color: $special-light;
       gap: 6px;
+
     }
   }
 
+}
+
+.catalog-active {
+  color: $basic-extra-light;
+  transform: rotate(180deg)
+}
+
+.visually-hidden-mobile {
+
+  @include media-mobile-xs {
+    display: block;
+    visibility: hidden;
+  }
 }
 
 
@@ -89,7 +109,7 @@
   }
 
   @include media-mobile-s {
-    @include font($size: 1rem, $height: normal, $weight: 400);
+    @include font($size: 1.2rem, $height: normal, $weight: 400);
   }
 
 
