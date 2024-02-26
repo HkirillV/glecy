@@ -1,6 +1,7 @@
 .promo-swiper {
   display: flex;
   align-items: center;
+  position: relative;
   column-gap: 37px;
 
   @include media-tablet-xs {
@@ -83,7 +84,7 @@
 
     @include media-tablet-xxs {
 
-      @include font($size: 1.2rem, $height: normal, $weight: 400);
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
     }
   }
 
@@ -121,6 +122,18 @@
       }
 
     }
+
+    &-background_pink {
+      background-color: $special-extra-light;
+    }
+
+    &-background_blue {
+      background-color: $special-light-blue;
+    }
+
+    &-background_yellow {
+      background-color: $special-light-yellow;
+    }
   }
 
   &__button {
@@ -133,7 +146,7 @@
 
     @include media-tablet-xxs {
 
-      @include font($size: 1.2rem, $height: normal, $weight: 700);
+      @include font($size: 1.4rem, $height: normal, $weight: 700);
     }
   }
 }
@@ -174,9 +187,6 @@
   display: flex;
   justify-content: flex-start;
 
-  @include media-tablet-xxs {
-    justify-content: center;
-  }
 
 
   &-bullet {
@@ -188,6 +198,26 @@
   &-bullet-active {
     background-color: $basic-extra-light;
   }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: var(--swiper-pagination-bottom, 8px);
+  z-index: 20;
+  column-gap: 16px;
+
+  img {
+    @include media-mobile-s {
+      width: 20px;
+      max-width: 100%;
+      height: 20px;
+    }
+  }
+
 }
 
 

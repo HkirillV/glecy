@@ -81,9 +81,11 @@
     @include font($size: 1.6rem, $height: normal, $weight: 700);
 
     @include media-mobile-s {
+      width: 150px;
 
       @include font($size: 1.4rem, $height: normal, $weight: 700);
     }
+
   }
 
   &__image {
@@ -91,6 +93,11 @@
     @include media-mobile-s {
       width: 150px;
       height: 180px;
+    }
+
+    @include media-mobile-xs {
+      width: 120px;
+      height: 120px;
     }
   }
 

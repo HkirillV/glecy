@@ -1,0 +1,119 @@
+.news {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 30px;
+
+  @include media-mobile-s {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/src/img/news/Новости.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 235px 67px 32px;
+    border-radius: 16px;
+    height: 224px;
+
+    @include media-mobile-s {
+     padding: 20px;
+    }
+
+    &__text {
+      padding-bottom: 12px;
+      color: $basic-dark;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-mobile-s {
+
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
+    }
+
+    &__title {
+      color: $basic-extra-dark;
+
+      @include font($size: 2.4rem, $height: normal, $weight: 700);
+
+      @include media-mobile-s {
+
+        @include font($size: 1.8rem, $height: normal, $weight: 700);
+      }
+    }
+  }
+
+  &-subscribe {
+    display: flex;
+    background-image: url("/src/img/news/Подписка.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 6px;
+    height: 224px;
+
+    &__content {
+      padding: 26px;
+      border-radius: 16px;
+      background-color: $basic-white;
+
+      @include media-mobile-s {
+        padding: 10px;
+      }
+    }
+
+    &__text {
+      color: $basic-dark;
+      padding-bottom: 42px;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-mobile-s {
+        padding-bottom: 10px;
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      @include media-mobile-s {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    &__form-input {
+      padding-inline: 16px 65px;
+      border-radius: 4px;
+      height: 48px;
+      color: $basic-neutral;
+      border: 1px solid $basic-neutral ;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-mobile-s {
+        padding-inline: 5px 90px;
+
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
+    }
+
+    &__button {
+
+      @include media-mobile-s {
+        height: 40px;
+        width: 150px;
+        max-width: 100%;
+      }
+    }
+
+  }
+}

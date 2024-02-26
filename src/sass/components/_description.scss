@@ -1,7 +1,13 @@
 .description {
   background-image: url("/src/img/description/Сео.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 16px;
   padding: 24px;
+
+  @include media-mobile-xs {
+    padding: 10px;
+  }
 
   &__content {
     border-radius: 16px;
@@ -25,7 +31,7 @@
     }
 
     @include media-tablet-xxs {
-      @include font($size: 2rem, $height: normal, $weight: 900);
+      @include font($size: 1.8rem, $height: normal, $weight: 900);
     }
   }
 
@@ -51,6 +57,13 @@
 
     @include media-tablet-xxs {
       @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
+  }
+
+  &__image {
+    @include media-mobile-xs {
+      width: 40px;
+      height: 40px;
     }
   }
 }

@@ -32,21 +32,25 @@ const promoMainSlider = new Swiper('.promo-main-slider', {
   }
 });
 
+const bodyElement = document.querySelector('body')
 
-promoMainSlider.on('transitionEnd', function (e) {
+promoMainSlider.on('transitionEnd', function (event) {
   if(this.realIndex === 0){
     document.querySelector("body").style.backgroundColor = '#feafc3';
-    document.querySelector(".swiper-slide__image-background").style.backgroundColor = '#ffcbd8';
-    document.querySelectorAll(".promo-secondary-slider__image-background").backgroundColor = '#ffcbd8';
+    document.querySelector("#slider-1").style.backgroundColor = '#ffcbd8';
+    document.querySelector("#slider-2").style.backgroundColor = '#ffcbd8';
+    document.querySelector('.swiper-slide__button').style.border = 'rgba(255, 47, 100, 0.30) 4px solid'
   }
   if(this.realIndex === 1){
     document.querySelector("body").style.background = '#69a9ff';
-    document.querySelector(".swiper-slide__image-background").style.backgroundColor = '#9fc8ff';
-    document.querySelectorAll(".promo-secondary-slider__image-background").backgroundColor = '#9fc8ff';
+    document.querySelector("#slider-2").style.backgroundColor = '#9fc8ff';
+    document.querySelector("#slider-3").style.backgroundColor = '#9fc8ff';
+    document.querySelector('.swiper-slide__button').style.border = 'rgba(72,170,224,0.73) 4px solid'
   }
   if(this.realIndex === 2){
     document.querySelector("body").style.background = '#fcc850';
-    document.querySelector(".swiper-slide__image-background").style.backgroundColor = '#fcdc92';
-    document.querySelectorAll(".promo-secondary-slider__image-background").backgroundColor = '#fcdc92';
+    document.querySelector("#slider-1").style.backgroundColor = '#fcdc92';
+    document.querySelector("#slider-3").style.backgroundColor = '#fcdc92';
+    document.querySelector('.swiper-slide__button').style.border = 'rgba(231,246,135,0.53) 4px solid'
   }
 });
