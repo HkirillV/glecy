@@ -1,0 +1,106 @@
+.delivery {
+  display: flex;
+  justify-content: center;
+  background-image: url("/src/img/delivery/Доставка.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px;
+  border-radius: 16px;
+
+}
+
+.delivery-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-right: 90px;
+  row-gap: 24px;
+
+  &__title {
+    color: $basic-extra-dark;
+
+    @include font($size: 3.2rem, $height: normal, $weight: 900);
+  }
+
+  &__text {
+    color: $basic-dark;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 400);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 25px;
+  padding: 40px;
+  height: 406px;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  background-color: $basic-extra-light;
+
+  &__content {
+    display: flex;
+    column-gap: 16px;
+    padding-bottom: 32px;
+  }
+
+  &__data, &__phone, &__address {
+    position: relative;
+  }
+
+  &__address {
+
+  }
+
+  input {
+    border-radius: 4px;
+    height: 48px;
+    border: 1px solid $basic-neutral;
+    background-color: $basic-white;
+    color: $basic-neutral;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 400);
+  }
+
+  &__data-input {
+    text-align: center;
+    width: 117px;
+    max-width: 100%;
+  }
+
+  &__phone-input {
+    padding-inline: 16px 40px;
+  }
+
+  &__address-input {
+    width: 100%;
+    padding-left: 16px;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    color: $basic-extra-dark;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 700);
+  }
+
+
+  &__text {
+    padding-bottom: 32px;
+    color: $basic-dark;
+
+    @include font($size: 1.6rem, $height: normal, $weight: 400);
+  }
+}

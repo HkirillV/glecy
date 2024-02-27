@@ -310,9 +310,31 @@
     </div>
   </section>
   <section class="delivery">
-    <div>
-      <h4></h4>
+    <div class="delivery-description">
+      <h4 class="delivery-description__title">Доставка любимого <br> мороженого на дом</h4>
+      <p class="delivery-description__text">Хочется полакомиться любимым десертом,<br> но нет времени съездить в магазин?
+        Закажите  доставку  мороженого на дом, и курьер <br> привезёт вам ваш заказ в течение часа!</p>
     </div>
+    <form class="delivery-form">
+      <p class="delivery-form__text">Укажите адрес и дату доставки, и мы свяжемся <br> с вами, чтобы подтвердить заказ.</p>
+      <div class="delivery-form__content">
+        <div class="delivery-form__data">
+          <label class="delivery-form__title" for="field1">Дата</label>
+          <input class="delivery-form__data-input" id="field1" type="text" placeholder="01.04.2020">
+        </div>
+        <div class="delivery-form__phone">
+          <label class="delivery-form__title" for="field2">Телефон</label>
+          <input class="delivery-form__phone-input" id="field2" type="tel" placeholder="+7 800 999-00-00">
+        </div>
+      </div>
+      <div class="delivery-form__address">
+        <label class="delivery-form__title" for="field3">Адрес</label>
+        <input class="delivery-form__address-input" id="field3" type="text" placeholder="ул. Большая Конюшенная, 19/8">
+      </div>
+      <div class="delivery-description__button">
+        <button class="button" type="button">Отправить</button>
+      </div>
+    </form>
   </section>
 </main>
 <script src="src/js/swiper/swiper-bundle.min.js"></script>

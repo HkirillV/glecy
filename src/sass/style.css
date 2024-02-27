@@ -1241,4 +1241,102 @@ section {
   }
 }
 
+.delivery {
+  display: flex;
+  justify-content: center;
+  background-image: url("/src/img/delivery/Доставка.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px;
+  border-radius: 16px;
+}
+
+.delivery-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-right: 90px;
+  row-gap: 24px;
+}
+.delivery-description__title {
+  color: #2d3440;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.delivery-description__text {
+  color: #565c66;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.delivery-description__button {
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 25px;
+  padding: 40px;
+  height: 406px;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  background-color: #fcfcfc;
+}
+.delivery-form__content {
+  display: flex;
+  column-gap: 16px;
+  padding-bottom: 32px;
+}
+.delivery-form__data, .delivery-form__phone, .delivery-form__address {
+  position: relative;
+}
+.delivery-form input {
+  border-radius: 4px;
+  height: 48px;
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  color: #b9b9b9;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.delivery-form__data-input {
+  text-align: center;
+  width: 117px;
+  max-width: 100%;
+}
+.delivery-form__phone-input {
+  padding-inline: 16px 40px;
+}
+.delivery-form__address-input {
+  width: 100%;
+  padding-left: 16px;
+}
+.delivery-form__title {
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  color: #2d3440;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.delivery-form__text {
+  padding-bottom: 32px;
+  color: #565c66;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /*# sourceMappingURL=style.css.map */
