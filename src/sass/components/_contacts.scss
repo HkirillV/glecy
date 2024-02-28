@@ -1,0 +1,61 @@
+.contacts {
+  display: flex;
+  justify-content: flex-start;
+  background-image: url("/src/img/contacts/Обратная_связь.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  padding: 64px;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: $basic-extra-light;
+    box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  }
+
+  &-form__address {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &-title {
+      color: $basic-dark;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+    }
+
+    &-text {
+      color: $basic-extra-dark;
+
+      @include font($size: 2rem, $height: normal, $weight: 700);
+    }
+  }
+
+  &-form__phone {
+
+
+    &-title {
+      padding-bottom: 12px ;
+      color: $basic-dark;
+
+      @include font($size: 1.6rem, $height: normal, $weight: 400);
+    }
+
+    &-text {
+      color: $basic-extra-dark;
+
+      @include font($size: 2rem, $height: normal, $weight: 700);
+    }
+
+    &-sub-title {
+      color: $basic-dark;
+
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
+  }
+
+}

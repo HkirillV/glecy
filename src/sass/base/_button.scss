@@ -8,4 +8,9 @@
   background-color: $special-extra-bright;
 
   @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+  @include media-mobile-s {
+
+    @include font($size: 1.4rem, $height: normal, $weight: 400);
+  }
 }

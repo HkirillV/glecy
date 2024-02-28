@@ -14,7 +14,7 @@
 
   @include media-tablet-xxs {
 
-    @include font($size: 2rem, $height: normal, $weight: 900);
+    @include font($size: 1.8rem, $height: normal, $weight: 900);
   }
 }
 
@@ -38,6 +38,10 @@
   &__image {
     position: absolute;
     top: -51px;
+
+    @include media-mobile-s {
+      width: 130px;
+    }
   }
 
   &__description {
@@ -53,7 +57,7 @@
 
     @include media-tablet-xxs {
 
-      @include font($size: 1.8rem, $height: normal, $weight: 700);
+      @include font($size: 1.6rem, $height: normal, $weight: 700);
     }
   }
 
@@ -91,7 +95,7 @@
 
     @include media-tablet-xxs {
 
-      @include font($size: 1.8rem, $height: normal, $weight: 700);
+      @include font($size: 1.6rem, $height: normal, $weight: 700);
     }
   }
 }

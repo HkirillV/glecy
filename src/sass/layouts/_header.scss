@@ -2,4 +2,8 @@
   display: flex;
   justify-content: center;
   padding-block: 24px;
+
+  @include media-mobile-xs {
+    height: 50px;
+  }
 }
