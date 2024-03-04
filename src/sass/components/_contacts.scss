@@ -7,6 +7,10 @@
   border-radius: 16px;
   padding: 64px;
 
+  @include media-mobile-s {
+    padding: 30px;
+  }
+
   &-form {
     display: flex;
     flex-direction: column;
@@ -15,6 +19,10 @@
     border-radius: 8px;
     background-color: $basic-extra-light;
     box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+
+    @include media-mobile-xs {
+      padding: 20px;
+    }
   }
 
   &-form__address {
@@ -26,12 +34,22 @@
       color: $basic-dark;
 
       @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-mobile-xs {
+
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
     }
 
     &-text {
       color: $basic-extra-dark;
 
       @include font($size: 2rem, $height: normal, $weight: 700);
+
+      @include media-mobile-xs {
+
+        @include font($size: 1.8rem, $height: normal, $weight: 700);
+      }
     }
   }
 
@@ -43,12 +61,22 @@
       color: $basic-dark;
 
       @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+      @include media-mobile-xs {
+
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
     }
 
     &-text {
       color: $basic-extra-dark;
 
       @include font($size: 2rem, $height: normal, $weight: 700);
+
+      @include media-mobile-xs {
+
+        @include font($size: 1.8rem, $height: normal, $weight: 700);
+      }
     }
 
     &-sub-title {

@@ -62,6 +62,7 @@
       }
 
       @include media-mobile-s {
+
         @include font($size: 1.2rem, $height: normal, $weight: 400);
       }
     }
@@ -69,9 +70,46 @@
     &__catalog {
       display: flex;
       align-items: center;
-      height: 20px;
       border: 0;
       gap: 6px;
+      border-radius: 30px;
+      padding: 8px 16px;
+      height: 36px;
+      background-color: rgb(0, 0, 0, 0);
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        row-gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 182px;
+        z-index: 10;
+        padding: 16px;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+        background-color: $basic-extra-light;
+
+
+        span {
+          border: 1px solid $basic-neutral;
+          width: 103px;
+          max-width: 100%;
+        }
+      }
+
+      &-link:first-child {
+
+        @include font($size: 1.4rem, $height: normal, $weight: 700);
+      }
+
+
+      &-link {
+        color: $basic-extra-dark;
+
+        @include font($size: 1.4rem, $height: normal, $weight: 400);
+      }
 
     }
   }
@@ -83,12 +121,20 @@
   transform: rotate(180deg)
 }
 
+.button-active {
+  background-color: $special-bright;
+}
+
 .visually-hidden-mobile {
 
   @include media-mobile-xs {
     display: block;
     visibility: hidden;
   }
+}
+
+.list-active {
+  visibility: visible;
 }
 
 
