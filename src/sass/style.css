@@ -1550,6 +1550,7 @@ section {
 .contacts {
   display: flex;
   justify-content: flex-start;
+  position: relative;
   background-image: url("/src/img/contacts/Обратная_связь.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1647,6 +1648,62 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.form {
+  position: absolute;
+  top: -390px;
+  right: 295px;
+  z-index: 10;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  position: relative;
+  border-radius: 8px;
+  padding: 64px;
+  background-color: #fcfcfc;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+}
+.form__icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 10;
+}
+.form__title {
+  color: #2d3440;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.form__input {
+  height: 48px;
+  width: 442px;
+  max-width: 100%;
+  border-radius: 4px;
+  color: #b9b9b9;
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  padding-left: 16px;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.form__input:last-child {
+  padding-block: 20px 115px;
+}
+.form__button {
+  display: flex;
+  justify-content: end;
 }
 
 /*# sourceMappingURL=style.css.map */
