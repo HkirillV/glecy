@@ -1,7 +1,6 @@
 .contacts {
   display: flex;
   justify-content: flex-start;
-  position: relative;
   background-image: url("/src/img/contacts/Обратная_связь.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,6 +14,7 @@
   &-form {
     display: flex;
     flex-direction: column;
+    position: relative;
     row-gap: 24px;
     padding: 40px;
     border-radius: 8px;
@@ -91,10 +91,26 @@
 
 
 .form {
+  display: none;
+  visibility: hidden;
   position: absolute;
-  top: -390px;
-  right: 295px;
+  top: -455px;
+  left: 220px;
   z-index: 10;
+
+  @include media-tablet-xxs {
+    left: 105px;
+  }
+
+  @include media-mobile-s {
+    top: -355px;
+  }
+
+  @include media-mobile-xs {
+    top: -370px;
+    left: 20px;
+  }
+
 
   &__wrapper {
     display: flex;
@@ -105,6 +121,15 @@
     padding: 64px;
     background-color: $basic-extra-light;
     box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+
+    @include media-tablet-s {
+      padding: 40px;
+    }
+
+    @include media-mobile-s {
+      row-gap: 15px;
+      padding: 15px;
+    }
   }
 
   &__icon {
@@ -112,12 +137,27 @@
     top: 32px;
     right: 32px;
     z-index: 10;
+
+    @include media-mobile-s {
+      top: 15px;
+      right: 15px;
+    }
   }
 
   &__title {
     color: $basic-extra-dark;
 
     @include font($size: 2.4rem, $height: normal, $weight: 700);
+
+    @include media-tablet-xs {
+
+      @include font($size: 2rem, $height: normal, $weight: 700);
+    }
+
+    @include media-mobile-s {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 700);
+    }
   }
 
   &__content {
@@ -128,8 +168,7 @@
 
   &__input {
     height: 48px;
-    width: 442px;
-    max-width: 100%;
+    padding-right: 210px;
     border-radius: 4px;
     color: $basic-neutral;
     border: 1px solid $basic-neutral;
@@ -137,6 +176,25 @@
     padding-left: 16px;
 
     @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+    @include media-tablet-xs {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
+
+    @include media-tablet-xs {
+      padding-right: 120px;
+
+    }
+
+    @include media-mobile-s {
+      padding-right: 55px;
+    }
+
+    @include media-mobile-xs {
+      padding-right: 25px;
+    }
+
   }
 
   &__input:last-child {
@@ -147,5 +205,10 @@
   &__button {
     display: flex;
     justify-content: end;
+
+    @include media-tablet-xs {
+
+      @include font($size: 1.4rem, $height: normal, $weight: 400);
+    }
   }
 }

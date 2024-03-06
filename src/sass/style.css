@@ -1550,7 +1550,6 @@ section {
 .contacts {
   display: flex;
   justify-content: flex-start;
-  position: relative;
   background-image: url("/src/img/contacts/Обратная_связь.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1565,6 +1564,7 @@ section {
 .contacts-form {
   display: flex;
   flex-direction: column;
+  position: relative;
   row-gap: 24px;
   padding: 40px;
   border-radius: 8px;
@@ -1651,10 +1651,28 @@ section {
 }
 
 .form {
+  display: none;
+  visibility: hidden;
   position: absolute;
-  top: -390px;
-  right: 295px;
+  top: -455px;
+  left: 220px;
   z-index: 10;
+}
+@media (max-width: 768px) {
+  .form {
+    left: 105px;
+  }
+}
+@media (max-width: 640px) {
+  .form {
+    top: -355px;
+  }
+}
+@media (max-width: 480px) {
+  .form {
+    top: -370px;
+    left: 20px;
+  }
 }
 .form__wrapper {
   display: flex;
@@ -1666,11 +1684,28 @@ section {
   background-color: #fcfcfc;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
 }
+@media (max-width: 1024px) {
+  .form__wrapper {
+    padding: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .form__wrapper {
+    row-gap: 15px;
+    padding: 15px;
+  }
+}
 .form__icon {
   position: absolute;
   top: 32px;
   right: 32px;
   z-index: 10;
+}
+@media (max-width: 640px) {
+  .form__icon {
+    top: 15px;
+    right: 15px;
+  }
 }
 .form__title {
   color: #2d3440;
@@ -1679,6 +1714,22 @@ section {
   font-weight: 700;
   line-height: normal;
 }
+@media (max-width: 920px) {
+  .form__title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media (max-width: 640px) {
+  .form__title {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
 .form__content {
   display: flex;
   flex-direction: column;
@@ -1686,8 +1737,7 @@ section {
 }
 .form__input {
   height: 48px;
-  width: 442px;
-  max-width: 100%;
+  padding-right: 210px;
   border-radius: 4px;
   color: #b9b9b9;
   border: 1px solid #b9b9b9;
@@ -1698,12 +1748,43 @@ section {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 920px) {
+  .form__input {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media (max-width: 920px) {
+  .form__input {
+    padding-right: 120px;
+  }
+}
+@media (max-width: 640px) {
+  .form__input {
+    padding-right: 55px;
+  }
+}
+@media (max-width: 480px) {
+  .form__input {
+    padding-right: 25px;
+  }
+}
 .form__input:last-child {
   padding-block: 20px 115px;
 }
 .form__button {
   display: flex;
   justify-content: end;
+}
+@media (max-width: 920px) {
+  .form__button {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
