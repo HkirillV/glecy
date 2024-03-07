@@ -4,6 +4,7 @@ import './src/js/burger.js'
 import './src/js/search.js'
 import './src/js/authorization.js'
 import './src/js/basket.js'
+import './src/js/contactsForm.js'
 
 
 

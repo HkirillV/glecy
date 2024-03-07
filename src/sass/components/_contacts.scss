@@ -112,6 +112,7 @@
   }
 
 
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -211,4 +212,9 @@
       @include font($size: 1.4rem, $height: normal, $weight: 400);
     }
   }
+}
+
+.form-active {
+  display: block;
+  visibility: visible;
 }

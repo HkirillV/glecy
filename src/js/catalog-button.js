@@ -13,5 +13,4 @@ catalogButtonElement.addEventListener('click', () => {
     catalogButtonTextElement.style.color = '#2d3440'
   }
 
-
 })
