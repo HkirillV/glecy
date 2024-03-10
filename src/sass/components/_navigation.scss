@@ -18,7 +18,7 @@
       align-items: center;
 
       @include media-tablet {
-        column-gap: 25px;
+        column-gap: 15px;
       }
 
       @include media-mobile-s {
@@ -44,6 +44,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
       height: 36px;
       padding-inline: 16px;
 
@@ -83,8 +84,8 @@
         visibility: hidden;
         row-gap: 10px;
         position: absolute;
-        top: 60px;
-        left: 182px;
+        top: 45px;
+        left: 15px;
         z-index: 10;
         padding: 16px;
         border-radius: 4px;
