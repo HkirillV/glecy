@@ -18,7 +18,13 @@
   }
 
   @include media-tablet-s {
-    top: 100px;
+    top: 150px;
+    right: 165px;
+  }
+
+  @include media-mobile-xs {
+    top: 160px;
+    right: 45px;
   }
 
 

@@ -4,8 +4,9 @@ const navButtonElement = document.querySelector('.navigation-burger-menu')
 const searchFormElement = document.querySelector('.search')
 const searchBtnElement = document.querySelector('.navigation-button__search')
 const overlayIconElement = document.querySelector('.navigation-burger-menu__icon')
+const authorizationElement = document.querySelector('.authorization')
 
-burgerBtnElement.addEventListener('click', function () {
+burgerBtnElement.addEventListener('click',  () => {
   burgerBtnElement.classList.toggle('close')
   navButtonElement.classList.toggle('overlay')
   if(!burgerBtnElement.classList.contains('close')) {
@@ -14,6 +15,9 @@ burgerBtnElement.addEventListener('click', function () {
     searchBtnElement.classList.remove('overlay-form')
   }
 })
+
+
+
 
 //Закрыть меню при нажатии на Esc
 window.addEventListener('keydown', (event) => {

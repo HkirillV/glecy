@@ -12,11 +12,29 @@
   background-color: $basic-extra-light;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
 
+  @include media-tablet-s {
+    top: 200px;
+    right: 210px;
+    padding: 20px;
+  }
+
+  @include media-mobile-s {
+    top: 220px;
+    right: 130px;
+  }
+
+  @include media-mobile-xs {
+    right: 25px;
+  }
+
+
+
   &__form {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
     padding-bottom: 32px;
+
   }
 
   &__title {
@@ -24,6 +42,8 @@
     color: $basic-extra-dark;
 
     @include font($size: 2.4rem, $height: normal, $weight: 700);
+
+
   }
 
   &__input {
@@ -37,6 +57,8 @@
     color: $basic-extra-dark;
 
     @include font($size: 1.6rem, $height: normal, $weight: 400);
+
+
   }
 
   &__button {

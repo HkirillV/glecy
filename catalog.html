@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <link rel="stylesheet" href="src/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="src/sass/style.css">
+  <title>Каталог</title>
+</head>
+<body>
+<div class="header">
+  <div class="navigation container">
+    <nav class="navigation-menu">
+      <a class="navigation-menu__logo" href="/">
+        <img class="navigation-menu__logo-icon" src="src/img/header/logo.svg" width="137" height="56" loading="lazy"
+             alt="logo">
+      </a>
+      <ul class="navigation-menu__list visually-hidden-mobile">
+        <li class="navigation-menu__item">
+          <button class="navigation-menu__catalog" type="button">
+            <p class="navigation-menu__text">Каталог</p>
+            <svg class="navigation-menu__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.80812 1.05317C1.54777 0.792823 1.12566 0.792823 0.865306 1.05317C0.604957 1.31352 0.604957 1.73563 0.865306 1.99598L5.52565 6.65633C5.52771 6.65844 5.52979 6.66055 5.53189 6.66265C5.66259 6.79334 5.83404 6.85843 6.00534 6.85791C6.1753 6.85741 6.34511 6.79233 6.47478 6.66265C6.47687 6.66056 6.47894 6.65847 6.48099 6.65636L11.1414 1.99598C11.4017 1.73563 11.4017 1.31352 11.1414 1.05317C10.881 0.792823 10.4589 0.792823 10.1986 1.05317L6.00334 5.24839L1.80812 1.05317Z"
+                    fill="#2D3440"/>
+            </svg>
+          </button>
+          <div class="navigation-menu__catalog-list">
+            <a class="navigation-menu__catalog-link" href="/">Новинки</a>
+            <span></span>
+            <a class="navigation-menu__catalog-link" href="/">Сливочное</a>
+            <a class="navigation-menu__catalog-link" href="/">Щербеты</a>
+            <a class="navigation-menu__catalog-link" href="/">Фруктовый лед</a>
+            <a class="navigation-menu__catalog-link" href="/">Мелорин</a>
+          </div>
+        </li>
+        <li class="navigation-menu__item">
+          <a class="navigation-menu__link" href="/">
+            <p class="navigation-menu__text">Доставка и оплата</p>
+          </a>
+        </li>
+        <li class="navigation-menu__item">
+          <a class="navigation-menu__link" href="/">
+            <p class="navigation-menu__text">О компании</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="navigation-burger-menu">
+      <a class="navigation-burger-menu__phone" href="tel: +7 800 555-86-28">+7 800 555-86-28</a>
+      <button class="navigation-burger-menu__item" id="search-button" type="button">
+        <img class="navigation-burger-menu__icon" src="src/img/header/Search.svg" width="16" height="17"
+             loading="lazy"
+             alt="search">
+      </button>
+      <button class="navigation-burger-menu__item navigation-button__login" type="button">
+        <img class="navigation-burger-menu__icon icon-white" src="src/img/header/Log-in.svg" width="16"
+             height="17" loading="lazy"
+             alt="вход">
+        <span class="navigation-burger-menu__text">Вход</span>
+      </button>
+      <button class="navigation-burger-menu__item" type="button">
+        <img class="navigation-burger-menu__icon" id="basket" src="src/img/header/Cart.svg" width="16" height="17"
+             loading="lazy"
+             alt="card">
+        <span class="navigation-burger-menu__text"> 2 товара</span>
+      </button>
+      <div class="search">
+        <form class="search__form">
+          <input class="search__form_input" type="search" value="" placeholder="Поиск по сайту">
+        </form>
+      </div>
+      <div class="authorization">
+        <h4 class="authorization__title">Личный кабинет</h4>
+        <form class="authorization__form">
+          <input class="authorization__input" type="email" placeholder="Логин">
+          <input class="authorization__input" type="password" placeholder="Пароль">
+        </form>
+        <div class="authorization__button">
+          <button class="button" type="button">Войти</button>
+          <div class="authorization__button-link">
+            <a class="authorization__link" href="/">Забыли пароль?</a>
+            <a class="authorization__link" href="/">Регистрация</a>
+          </div>
+        </div>
+      </div>
+      <div class="basket">
+        <p class="basket__title">Ваша корзина пока <br> пуста</p>
+        <!--        <button class="button" type="button">Оформить заказ</button>-->
+      </div>
+    </div>
+  </div>
+  <div class="burger-btn">
+    <span></span>
+  </div>
+</div>
+<section class="wrapper container">
+  <div class="cards"></div>
+  <button class="show-cards none" type="button">Показать еще</button>
+</section>
+<footer class="footer container">
+  <div class="footer__social">
+    <a href="/"><img src="/src/img/swiper/telegram.svg" width="28" height="28" loading="lazy" alt="telegram"></a>
+    <a href="/"><img src="/src/img/swiper/vk.svg" width="28" height="28" loading="lazy" alt="vk"></a>
+    <a href="/"><img src="/src/img/swiper/youtube.svg" width="28" height="28" loading="lazy" alt="youtube"></a>
+  </div>
+  <div class="footer__list">
+    <img class="footer__icon" src="/src/img/footer/Vector.svg" alt="vector">
+    <a class="footer__link footer__link_black" href="/">Для поставщиков</a>
+    <a class="footer__link" href="/">Наши документы</a>
+    <a class="footer__link" href="/">О производстве</a>
+    <a class="footer__link" href="/">Экологические стандарты</a>
+  </div>
+  <div class="footer__logo">
+    <img src="/src/img/header/logo.svg" width="137" height="56" loading="lazy" alt="logo">
+  </div>
+</footer>
+<script src="src/js/swiper/swiper-bundle.min.js"></script>
+<script type="module" src="main.js" defer></script>
+</body>
+</html>
