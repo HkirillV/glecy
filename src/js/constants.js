@@ -1,4 +1,4 @@
-export const COUNT_SHOW_CARDS_CLICK = 5
+export const COUNT_SHOW_CARDS_CLICK = 4
 
 export const ERROR_SERVER = 'Ошибка сервера, попробуйте позже'
 export const NO_PRODUCTS_IN_THIS_CATEGORY = 'Товаров в этой категории нет!'

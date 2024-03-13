@@ -1828,4 +1828,25 @@ section {
   visibility: visible;
 }
 
+.catalog__filter {
+  margin-bottom: 70px;
+}
+.catalog__footer {
+  display: flex;
+  justify-content: center;
+  padding: 41px 98px;
+}
+.catalog__footer button {
+  color: #2d3440;
+  background-color: #fcfcfc;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.none {
+  visibility: hidden;
+}
+
 /*# sourceMappingURL=style.css.map */

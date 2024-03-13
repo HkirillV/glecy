@@ -15,7 +15,7 @@ export const removeFormElement = (removeFormElement, removeColorRedElement, remo
 
 
 export function showErrorMessage(message) {
-  const h1 = document.querySelector('.catalog h2')
+  const h2 = document.querySelector('.catalog')
   const msg =
     `<div class="error">
         <p>${message}</p>
