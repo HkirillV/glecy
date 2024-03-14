@@ -1849,4 +1849,8 @@ section {
   visibility: hidden;
 }
 
+.activeBtn {
+  background-color: #00e484;
+}
+
 /*# sourceMappingURL=style.css.map */

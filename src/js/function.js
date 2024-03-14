@@ -35,6 +35,7 @@ export function setBasketLocalStorage(basket) {
   basketCount.textContent = basket.length
 }
 
+
 export function checkingRelevanceValueBasket(productsData) {
   const basket = getBasketLocalStorage()
 

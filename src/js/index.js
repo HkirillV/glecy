@@ -3,16 +3,15 @@
 import {
   showErrorMessage,
   setBasketLocalStorage,
-  getBasketLocalStorage,
-  checkingRelevanceValueBasket
+  getBasketLocalStorage, checkingRelevanceValueBasket
 } from "./function.js";
 
 import {
   COUNT_SHOW_CARDS_CLICK,
   ERROR_SERVER,
-  NO_PRODUCTS_IN_THIS_CATEGORY
+  NO_PRODUCTS_IN_THIS_CATEGORY,
+  PRODUCT_INFORMATION_NOT_FOUND,
 } from "./constants.js";
-
 
 const cards = document.querySelector('.list')
 const btnShowCards = document.querySelector('.show-cards')
@@ -23,6 +22,7 @@ let productsData = []
 getProducts()
 
 btnShowCards.addEventListener('click', sliceArrCards)
+cards.addEventListener('click', handleCardClick)
 
 async function getProducts() {
   try {
@@ -53,6 +53,11 @@ function renderStartPage(data) {
 
   const arrCards = data.slice(0, COUNT_SHOW_CARDS_CLICK)
   createCards(arrCards)
+
+  checkingRelevanceValueBasket(data)
+
+  const basket = getBasketLocalStorage()
+  checkingActiveButtons(basket)
 }
 
 function sliceArrCards() {
@@ -66,9 +71,37 @@ function sliceArrCards() {
   createCards(arrCards)
   showCards = cards.children.length
 
-   if(showCards >= productsData.length) {
-     btnShowCards.classList.add('none')
-   }
+  if (showCards >= productsData.length) {
+    btnShowCards.classList.add('none')
+  }
+}
+
+function handleCardClick(event) {
+  const targetButton = event.target.closest('.price__button')
+  if (!targetButton) return
+
+  const card = targetButton.closest('.list-card')
+  const id = card.dataset.productId
+  const basket = getBasketLocalStorage()
+
+  if (basket.includes(id)) return
+
+  basket.push(id)
+  setBasketLocalStorage(basket)
+  checkingActiveButtons(basket)
+}
+
+function checkingActiveButtons(basket) {
+  const buttons = document.querySelectorAll('.price__button')
+
+  buttons.forEach(btn => {
+    const card = btn.closest('.list-card')
+    const id = card.dataset.productId
+    const isInBasket = basket.includes(id)
+
+    btn.disabled = isInBasket
+    btn.classList.toggle('activeBtn', isInBasket)
+  })
 }
 
 
