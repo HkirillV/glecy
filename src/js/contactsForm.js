@@ -1,4 +1,4 @@
-const bodyElement = document.querySelector('body')
+
 const contactsFormElement = document.querySelector('.form')
 const contactsBtnElement = document.querySelector('.contacts-form__button')
 const contactsFormIconElement = document.querySelector('.form__icon')
@@ -18,15 +18,11 @@ window.addEventListener('keydown', (event) => {
 })
 
 
-contactsFormElement.addEventListener('click', (event) => {
-  event._isClickWidthInMenu = true
-});
+document.addEventListener('click', ({target}) => {
+  const isClickInsideForm = target.closest('.form')
+  const isClickOnButton = target.closest('.contacts-form__button')
 
-contactsBtnElement.addEventListener('click', (event) => {
-  event._isClickWidthInMenu = true
-})
-
-bodyElement.addEventListener('click', (event) => {
-  if(event._isClickWidthInMenu) return;
-  contactsFormElement.classList.remove('form-active')
+  if (!isClickOnButton && !isClickInsideForm) {
+    contactsFormElement.classList.remove('form-active')
+  }
 })

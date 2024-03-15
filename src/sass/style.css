@@ -77,6 +77,10 @@ button:hover {
   cursor: pointer;
 }
 
+button:focus {
+  opacity: 1;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -323,24 +327,11 @@ section {
   line-height: normal;
 }
 
-.catalog-active {
-  color: #fcfcfc;
-  transform: rotate(180deg);
-}
-
-.button-active {
-  background-color: #ff4a78;
-}
-
 @media (max-width: 480px) {
   .visually-hidden-mobile {
     display: block;
     visibility: hidden;
   }
-}
-
-.list-active {
-  visibility: visible;
 }
 
 .navigation-burger-menu {
@@ -440,7 +431,7 @@ section {
   position: absolute;
   visibility: hidden;
   top: 50px;
-  right: 141px;
+  right: 170px;
   z-index: 10;
   padding: 48px;
   max-width: 420px;
@@ -632,7 +623,7 @@ section {
   position: absolute;
   visibility: hidden;
   top: 50px;
-  right: 245px;
+  right: 270px;
   z-index: 10;
   padding: 24px 16px;
   border-radius: 4px;
@@ -692,16 +683,21 @@ section {
   visibility: visible;
 }
 
-.overlay-red {
+.active-btn {
   background-color: #ff4a78;
 }
-
-.overlay-white-icon {
+.active-btn img {
   filter: brightness(0) invert(1);
 }
-
-.overlay-white-text {
+.active-btn span {
+  color: #fff;
+}
+.active-btn p {
   color: #fcfcfc;
+}
+.active-btn svg {
+  color: #fcfcfc;
+  transform: rotate(180deg);
 }
 
 .basket {
@@ -713,7 +709,7 @@ section {
   top: 55px;
   right: 12px;
   z-index: 10;
-  padding-inline: 15px;
+  padding-inline: 25px;
   border-radius: 4px;
   height: 156px;
   background-color: #fcfcfc;
@@ -725,6 +721,10 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.overlay-form {
+  visibility: visible;
 }
 
 .promo-swiper {
@@ -1829,7 +1829,7 @@ section {
 }
 
 .catalog__filter {
-  margin-bottom: 70px;
+  margin-bottom: 260px;
 }
 .catalog__footer {
   display: flex;

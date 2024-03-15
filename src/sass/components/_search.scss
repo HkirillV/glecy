@@ -2,7 +2,7 @@
   position: absolute;
   visibility: hidden;
   top: 50px;
-  right: 245px;
+  right: 270px;
   z-index: 10;
   padding: 24px 16px;
   border-radius: 4px;
@@ -57,16 +57,27 @@
   visibility: visible;
 }
 
-.overlay-red {
+.active-btn {
   background-color: $special-bright;
+
+  img {
+    filter: brightness(0) invert(1);
+  }
+
+  span {
+    color: $basic-white;
+  }
+
+
+  p {
+    color: $basic-extra-light;
+  }
+
+  svg {
+    color: $basic-extra-light;
+    transform: rotate(180deg)
+  }
 }
 
-.overlay-white-icon {
-  filter: brightness(0) invert(1);
-}
-
-.overlay-white-text {
-  color: $basic-extra-light;
-}
 
 

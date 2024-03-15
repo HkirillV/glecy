@@ -1,17 +1,5 @@
 'use strict'
-export const overlayFormElement = (overlayFormElement, overlayColorRedElement, overlayColorIconElement, overlayColorTextElement) => {
-  overlayFormElement.classList.toggle('overlay-form')
-  overlayColorRedElement.classList.toggle('overlay-red')
-  overlayColorIconElement.classList.toggle('overlay-white-icon')
-  overlayColorTextElement.classList.toggle('overlay-white-text')
-}
 
-export const removeFormElement = (removeFormElement, removeColorRedElement, removeColorIconElement, removeColorTextElement) => {
-  removeFormElement.classList.remove('overlay-form')
-  removeColorRedElement.classList.remove('overlay-red')
-  removeColorIconElement.classList.remove('overlay-white-icon')
-  removeColorTextElement.classList.remove('overlay-white-text')
-}
 
 
 export function showErrorMessage(message) {
@@ -32,7 +20,17 @@ export function getBasketLocalStorage() {
 export function setBasketLocalStorage(basket) {
   const basketCount = document.querySelector('.basket__count')
   localStorage.setItem('basket', JSON.stringify(basket))
-  basketCount.textContent = basket.length
+  if(!basket || !basket.length) {
+    basketCount.textContent = 'Нет товаров'
+    return
+  }
+
+  basketCount.textContent = basket.length + ' товара';
+
+  const authorizationFormElement =  document.querySelector('.authorization')
+  const searchFormElement = document.querySelector('.search')
+  authorizationFormElement.style.right = '141px'
+  searchFormElement.style.right = '245px'
 }
 
 
@@ -41,7 +39,7 @@ export function checkingRelevanceValueBasket(productsData) {
 
   basket.forEach((basketId, index) => {
     const existsInProducts = productsData.some(item => item.id === Number(basketId))
-    if(!existsInProducts) {
+    if (!existsInProducts) {
       basket.splice(index, 1)
     }
   })
