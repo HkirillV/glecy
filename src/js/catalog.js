@@ -3,7 +3,8 @@
 import {
   showErrorMessage,
   setBasketLocalStorage,
-  getBasketLocalStorage, checkingRelevanceValueBasket
+  getBasketLocalStorage,
+  checkingRelevanceValueBasket
 } from "./function.js";
 
 import {
