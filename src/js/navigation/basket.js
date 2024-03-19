@@ -5,7 +5,8 @@ import {
   showErrorMessage,
   setBasketLocalStorage,
   getBasketLocalStorage,
-  checkingRelevanceValueBasket
+  checkingRelevanceValueBasket,
+  renderWrapperBasket
 } from "../function.js";
 
 const basketBtnElement = document.querySelector('.navigation-button__basket')
@@ -37,11 +38,15 @@ document.addEventListener('click', ({target}) => {
   }
 })
 
-const cart = document.querySelector('.basket__list')
-const basketStyle = document.querySelector('.basket')
+
+
+const card = document.querySelector('.basket__list')
 let productData = []
 
 getProducts()
+
+
+card.addEventListener('click', delProductBasket)
 async function getProducts() {
   try {
     if (!productData.length) {
@@ -61,8 +66,7 @@ async function getProducts() {
 }
 
 function loadProductsBasket(data) {
-  cart.textContent = ''
-
+  
 
   if (!data || !data.length) {
     showErrorMessage(ERROR_SERVER)
@@ -84,14 +88,15 @@ function loadProductsBasket(data) {
     return;
   }
 
-
-  
+  renderWrapperBasket(card, findProducts)
   renderProductsBasket(findProducts)
 }
 
+
 function renderProductsBasket (arr) {
- arr.forEach(card => {
-   const {id, img, title, price} = card
+ arr.forEach(el => {
+   const {id, img, title, price} = el
+
 
    const cardItem =
      `
@@ -110,6 +115,22 @@ function renderProductsBasket (arr) {
            <div class="card__close"><img src="/src/img/basket/Union.svg" width="10" height="10" loading="lazy" alt="close"></div>
       </div>
       `
-   cart.insertAdjacentHTML('beforeend', cardItem)
+   card.insertAdjacentHTML('beforeend', cardItem)
  })
+}
+
+
+function delProductBasket (event) {
+  const targetButton = event.target.closest('.card__close')
+  if(!targetButton) return
+
+  const card = targetButton.closest('.card')
+  const id = card.dataset.productId
+  const basket = getBasketLocalStorage()
+
+  const newBasket = basket.filter(item => item !== id)
+  setBasketLocalStorage(newBasket)
+
+  getProducts()
+
 }

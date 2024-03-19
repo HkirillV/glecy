@@ -3,13 +3,13 @@
 
 
 export function showErrorMessage(message) {
-  const h2 = document.querySelector('.catalog')
+  const h2 = document.querySelector('.basket')
   const msg =
-    `<div class="error">
-        <p>${message}</p>
-        <p><a href="/">Перейти к списку товаров!</a></p>
-    </div>`
-  h2.insertAdjacentHTML('afterend', msg)
+    `
+    <p class="basket__title">Ваша корзина пока <br> пуста</p>
+    `
+  h2.insertAdjacentHTML('beforeend', msg)
+  console.log(message)
 }
 
 export function getBasketLocalStorage() {
@@ -46,3 +46,31 @@ export function checkingRelevanceValueBasket(productsData) {
 
   setBasketLocalStorage(basket)
 }
+
+export function renderWrapperBasket (card, arr) {
+  const price = arr.reduce((acc, el) => {
+     const {id, img, title, price} = el
+    return acc + price
+  }, 0)
+
+  const basketTitle =
+    `
+          <div class="basket__title">Корзина</div>
+         
+    `
+  card.insertAdjacentHTML('beforebegin', basketTitle)
+
+  const basketFooter =
+
+    `
+          <span class="card__border"></span>
+          <div class="card__footer">
+            <button class="button" type="button">Оформить заказ</button>
+            <span class="card__total-price">Итого: ${price}  ₽</span>
+          </div>
+    
+    `
+
+  card.insertAdjacentHTML('afterend', basketFooter)
+}
+
