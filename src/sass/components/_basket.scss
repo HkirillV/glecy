@@ -13,6 +13,7 @@
   background-color: $basic-extra-light;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
 
+
   &__title {
     display: flex;
     justify-content: flex-start;
@@ -32,6 +33,11 @@
 
 .overlay-form {
   visibility: visible;
+}
+
+.none {
+  display: none;
+  visibility: hidden;
 }
 
 .card {

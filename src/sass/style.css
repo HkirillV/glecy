@@ -735,6 +735,11 @@ section {
   visibility: visible;
 }
 
+.none {
+  display: none;
+  visibility: hidden;
+}
+
 .card {
   display: grid;
   align-items: center;

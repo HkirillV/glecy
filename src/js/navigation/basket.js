@@ -6,7 +6,7 @@ import {
   setBasketLocalStorage,
   getBasketLocalStorage,
   checkingRelevanceValueBasket,
-  renderWrapperBasket
+  // renderWrapperBasket
 } from "../function.js";
 
 const basketBtnElement = document.querySelector('.navigation-button__basket')
@@ -40,13 +40,20 @@ document.addEventListener('click', ({target}) => {
 
 
 
+
+
 const card = document.querySelector('.basket__list')
+const basketContent = document.querySelector('.basket__content')
+
+
 let productData = []
 
 getProducts()
 
 
 card.addEventListener('click', delProductBasket)
+
+
 async function getProducts() {
   try {
     if (!productData.length) {
@@ -65,8 +72,11 @@ async function getProducts() {
   }
 }
 
+
+
 function loadProductsBasket(data) {
-  
+  card.textContent = ''
+
 
   if (!data || !data.length) {
     showErrorMessage(ERROR_SERVER)
@@ -76,30 +86,46 @@ function loadProductsBasket(data) {
   checkingRelevanceValueBasket(data)
   const basket = getBasketLocalStorage()
 
-  if(!basket || !basket.length) {
+  if (!basket || !basket.length) {
     showErrorMessage(NO_ITEMS_CARD)
     return;
   }
 
   const findProducts = data.filter(item => basket.includes(String(item.id)))
 
-  if(!findProducts.length) {
+  if (!findProducts.length) {
     showErrorMessage(NO_ITEMS_CARD)
     return;
   }
-
-  renderWrapperBasket(card, findProducts)
+  basketContent.classList.remove('none')
+  // renderWrapperBasket(basketContent, findProducts)
   renderProductsBasket(findProducts)
 }
 
+function delProductBasket(event) {
+  const targetButton = event.target.closest('.card__close')
+  if (!targetButton) {
+    return
+  }
 
-function renderProductsBasket (arr) {
- arr.forEach(el => {
-   const {id, img, title, price} = el
+  const card = targetButton.closest('.card')
+  const id = card.dataset.productId
+  const basket = getBasketLocalStorage()
+
+  const newBasket = basket.filter(item => item !== id)
+  setBasketLocalStorage(newBasket)
+
+  getProducts()
+}
 
 
-   const cardItem =
-     `
+
+function renderProductsBasket(arr) {
+  arr.forEach(el => {
+    const {id, img, title, price} = el
+
+    const cardItem =
+      `
       <div class="card" data-product-id="${id}">
             <div class="card__wrapper">
                 <div class="card__image">
@@ -115,22 +141,6 @@ function renderProductsBasket (arr) {
            <div class="card__close"><img src="/src/img/basket/Union.svg" width="10" height="10" loading="lazy" alt="close"></div>
       </div>
       `
-   card.insertAdjacentHTML('beforeend', cardItem)
- })
-}
-
-
-function delProductBasket (event) {
-  const targetButton = event.target.closest('.card__close')
-  if(!targetButton) return
-
-  const card = targetButton.closest('.card')
-  const id = card.dataset.productId
-  const basket = getBasketLocalStorage()
-
-  const newBasket = basket.filter(item => item !== id)
-  setBasketLocalStorage(newBasket)
-
-  getProducts()
-
+    card.insertAdjacentHTML('beforeend', cardItem)
+  })
 }
