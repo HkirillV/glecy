@@ -4,7 +4,8 @@ import {
   showErrorMessage,
   setBasketLocalStorage,
   getBasketLocalStorage,
-  checkingRelevanceValueBasket
+  checkingRelevanceValueBasket,
+
 } from "./function.js";
 
 import {
@@ -21,6 +22,7 @@ let countClickBtnShowCards = 1
 let productsData = []
 
 getProducts()
+
 
 btnShowCards.addEventListener('click', sliceArrCards)
 cards.addEventListener('click', handleCardClick)
@@ -77,7 +79,7 @@ function sliceArrCards() {
   }
 }
 
-function handleCardClick(event) {
+export function handleCardClick(event) {
   const targetButton = event.target.closest('.price__button')
   if (!targetButton) return
 
@@ -90,6 +92,7 @@ function handleCardClick(event) {
   basket.push(id)
   setBasketLocalStorage(basket)
   checkingActiveButtons(basket)
+
 }
 
 function checkingActiveButtons(basket) {
@@ -102,7 +105,9 @@ function checkingActiveButtons(basket) {
 
     btn.disabled = isInBasket
     btn.classList.toggle('activeBtn', isInBasket)
+
   })
+
 }
 
 

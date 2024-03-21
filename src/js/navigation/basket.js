@@ -6,11 +6,17 @@ import {
   setBasketLocalStorage,
   getBasketLocalStorage,
   checkingRelevanceValueBasket,
+  sumPrice
   // renderWrapperBasket
 } from "../function.js";
 
+import {
+  handleCardClick
+} from '../catalog.js'
+
 const basketBtnElement = document.querySelector('.navigation-button__basket')
 const basketFormElement = document.querySelector('.basket')
+
 
 
 basketBtnElement.addEventListener('click', () => {
@@ -46,12 +52,14 @@ const card = document.querySelector('.basket__list')
 const basketContent = document.querySelector('.basket__content')
 
 
+
 let productData = []
 
 getProducts()
 
 
 card.addEventListener('click', delProductBasket)
+
 
 
 async function getProducts() {
@@ -97,8 +105,10 @@ function loadProductsBasket(data) {
     showErrorMessage(NO_ITEMS_CARD)
     return;
   }
+
+
   basketContent.classList.remove('none')
-  // renderWrapperBasket(basketContent, findProducts)
+  sumPrice(findProducts)
   renderProductsBasket(findProducts)
 }
 
