@@ -735,11 +735,6 @@ section {
   visibility: visible;
 }
 
-.none {
-  display: none;
-  visibility: hidden;
-}
-
 .card {
   display: grid;
   align-items: center;
@@ -781,7 +776,7 @@ section {
 .card__footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  column-gap: 32px;
 }
 
 .promo-swiper {

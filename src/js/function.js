@@ -1,17 +1,11 @@
 'use strict'
 
-
+const basketMessage = document.querySelector('.basket__message')
 
 export function showErrorMessage(message) {
-  const h2 = document.querySelector('.basket')
-  const msg =
-    `
-    <p class="basket__title">Ваша корзина пока <br> пуста</p>
-    `
-  h2.insertAdjacentHTML('beforeend', msg)
-
-  const basketContent = document.querySelector('.basket__content')
-  basketContent.classList.add('none')
+  basketMessage.innerHTML = `
+   Ваша корзина пока пуста
+  `
   console.log(message)
 }
 
@@ -23,6 +17,7 @@ export function getBasketLocalStorage() {
 export function setBasketLocalStorage(basket) {
   const basketCount = document.querySelector('.basket__count')
   localStorage.setItem('basket', JSON.stringify(basket))
+
   if(!basket || !basket.length) {
     basketCount.textContent = 'Нет товаров'
     return
@@ -30,18 +25,16 @@ export function setBasketLocalStorage(basket) {
 
   basketCount.textContent = basket.length + ' товара';
 
-  const authorizationFormElement =  document.querySelector('.authorization')
-  const searchFormElement = document.querySelector('.search')
-  authorizationFormElement.style.right = '141px'
-  searchFormElement.style.right = '245px'
 }
 
 
 export function checkingRelevanceValueBasket(productsData) {
   const basket = getBasketLocalStorage()
 
+
   basket.forEach((basketId, index) => {
     const existsInProducts = productsData.some(item => item.id === Number(basketId))
+
     if (!existsInProducts) {
       basket.splice(index, 1)
     }
@@ -51,7 +44,7 @@ export function checkingRelevanceValueBasket(productsData) {
 }
 
 
-export function sumPrice (arr) {
+export function totalAmountBasket (arr) {
   const cardPrice = document.querySelector('.card__total-price')
 
   const sum = arr.reduce((acc, el) => {
@@ -59,7 +52,24 @@ export function sumPrice (arr) {
   },0)
 
   cardPrice.textContent = `Итого: ${sum} ₽`
+}
 
+export function renderWrapperBasket () {
+  const basketElement = document.querySelector('.basket')
+
+  return basketElement.innerHTML = `
+    <div class="basket__content">
+          <div class="basket__title">Корзина</div>
+          <div class="basket__list">
+
+          </div>
+          <span class="card__border"></span>
+          <div class="card__footer">
+            <button class="card__button button" type="button">Оформить заказ</button>
+            <span class="card__total-price"></span>
+          </div>
+        </div>
+    `
 }
 
 

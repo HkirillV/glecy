@@ -6,17 +6,13 @@ import {
   setBasketLocalStorage,
   getBasketLocalStorage,
   checkingRelevanceValueBasket,
-  sumPrice
-  // renderWrapperBasket
+  totalAmountBasket,
+  renderWrapperBasket
 } from "../function.js";
 
-import {
-  handleCardClick
-} from '../catalog.js'
 
 const basketBtnElement = document.querySelector('.navigation-button__basket')
 const basketFormElement = document.querySelector('.basket')
-
 
 
 basketBtnElement.addEventListener('click', () => {
@@ -44,22 +40,14 @@ document.addEventListener('click', ({target}) => {
   }
 })
 
-
-
-
-
-const card = document.querySelector('.basket__list')
-const basketContent = document.querySelector('.basket__content')
-
-
+const closeBtnElement = document.querySelector('.basket')
 
 let productData = []
 
 getProducts()
 
 
-card.addEventListener('click', delProductBasket)
-
+closeBtnElement.addEventListener('click', delProductBasket)
 
 
 async function getProducts() {
@@ -72,7 +60,9 @@ async function getProducts() {
       productData = await res.json()
     }
 
-    loadProductsBasket(productData)
+
+    loadProductsBasket()
+
 
   } catch (err) {
     showErrorMessage(ERROR_SERVER)
@@ -81,17 +71,16 @@ async function getProducts() {
 }
 
 
-
-function loadProductsBasket(data) {
-  card.textContent = ''
+function loadProductsBasket() {
 
 
-  if (!data || !data.length) {
+  if (!productData || !productData.length) {
     showErrorMessage(ERROR_SERVER)
     return
   }
 
-  checkingRelevanceValueBasket(data)
+  // checkingRelevanceValueBasket(productData)
+
   const basket = getBasketLocalStorage()
 
   if (!basket || !basket.length) {
@@ -99,7 +88,7 @@ function loadProductsBasket(data) {
     return;
   }
 
-  const findProducts = data.filter(item => basket.includes(String(item.id)))
+  const findProducts = productData.filter(item => basket.includes(String(item.id)))
 
   if (!findProducts.length) {
     showErrorMessage(NO_ITEMS_CARD)
@@ -107,8 +96,8 @@ function loadProductsBasket(data) {
   }
 
 
-  basketContent.classList.remove('none')
-  sumPrice(findProducts)
+  renderWrapperBasket()
+  totalAmountBasket(findProducts)
   renderProductsBasket(findProducts)
 }
 
@@ -125,17 +114,21 @@ function delProductBasket(event) {
   const newBasket = basket.filter(item => item !== id)
   setBasketLocalStorage(newBasket)
 
-  getProducts()
+  loadProductsBasket()
+  // const modifiedBasket = getBasketLocalStorage()
+  //
+  // renderProductsBasket(modifiedBasket)
+  // console.log(modifiedBasket)
 }
 
 
-
 function renderProductsBasket(arr) {
-  arr.forEach(el => {
+  const card = document.querySelector('.basket__list')
+
+  card.innerHTML = arr.reduce((acc, el) => {
     const {id, img, title, price} = el
 
-    const cardItem =
-      `
+     return `
       <div class="card" data-product-id="${id}">
             <div class="card__wrapper">
                 <div class="card__image">
@@ -151,6 +144,8 @@ function renderProductsBasket(arr) {
            <div class="card__close"><img src="/src/img/basket/Union.svg" width="10" height="10" loading="lazy" alt="close"></div>
       </div>
       `
-    card.insertAdjacentHTML('beforeend', cardItem)
-  })
+  }, '')
+
 }
+
+
