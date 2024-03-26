@@ -1,11 +1,8 @@
 'use strict'
 
-const basketMessage = document.querySelector('.basket__message')
 
+const basketMessage = document.querySelector('.basket__message')
 export function showErrorMessage(message) {
-  basketMessage.innerHTML = `
-   Ваша корзина пока пуста
-  `
   console.log(message)
 }
 
@@ -42,6 +39,8 @@ export function checkingRelevanceValueBasket(productsData) {
 
   setBasketLocalStorage(basket)
 }
+
+
 
 
 export function totalAmountBasket (arr) {

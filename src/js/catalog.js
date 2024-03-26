@@ -8,12 +8,14 @@ import {
 
 } from "./function.js";
 
+
 import {
   COUNT_SHOW_CARDS_CLICK,
   ERROR_SERVER,
   NO_PRODUCTS_IN_THIS_CATEGORY,
   PRODUCT_INFORMATION_NOT_FOUND,
 } from "./constants.js";
+import {loadProductsBasket} from "./navigation/basket.js";
 
 const cards = document.querySelector('.list')
 const btnShowCards = document.querySelector('.show-cards')
@@ -92,7 +94,7 @@ export function handleCardClick(event) {
   basket.push(id)
   setBasketLocalStorage(basket)
   checkingActiveButtons(basket)
-
+  loadProductsBasket()
 }
 
 function checkingActiveButtons(basket) {

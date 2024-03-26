@@ -40,14 +40,16 @@ document.addEventListener('click', ({target}) => {
   }
 })
 
-const closeBtnElement = document.querySelector('.basket')
+const basket = document.querySelector('.basket')
+const basketMessage = document.querySelector('.basket__message')
 
 let productData = []
 
 getProducts()
 
 
-closeBtnElement.addEventListener('click', delProductBasket)
+basket.addEventListener('click', delProductBasket)
+
 
 
 async function getProducts() {
@@ -60,9 +62,7 @@ async function getProducts() {
       productData = await res.json()
     }
 
-
     loadProductsBasket()
-
 
   } catch (err) {
     showErrorMessage(ERROR_SERVER)
@@ -71,15 +71,17 @@ async function getProducts() {
 }
 
 
-function loadProductsBasket() {
-
+export  function loadProductsBasket() {
+  basketMessage.innerHTML =  `
+  Ваша корзина пока <br> пуста
+  `
 
   if (!productData || !productData.length) {
     showErrorMessage(ERROR_SERVER)
     return
   }
 
-  // checkingRelevanceValueBasket(productData)
+  checkingRelevanceValueBasket(productData)
 
   const basket = getBasketLocalStorage()
 
@@ -90,11 +92,11 @@ function loadProductsBasket() {
 
   const findProducts = productData.filter(item => basket.includes(String(item.id)))
 
-  if (!findProducts.length) {
+  if (!findProducts || !findProducts.length) {
     showErrorMessage(NO_ITEMS_CARD)
     return;
   }
-
+ console.log(findProducts)
 
   renderWrapperBasket()
   totalAmountBasket(findProducts)
@@ -111,24 +113,22 @@ function delProductBasket(event) {
   const id = card.dataset.productId
   const basket = getBasketLocalStorage()
 
+
   const newBasket = basket.filter(item => item !== id)
   setBasketLocalStorage(newBasket)
 
+
   loadProductsBasket()
-  // const modifiedBasket = getBasketLocalStorage()
-  //
-  // renderProductsBasket(modifiedBasket)
-  // console.log(modifiedBasket)
 }
 
 
 function renderProductsBasket(arr) {
   const card = document.querySelector('.basket__list')
 
-  card.innerHTML = arr.reduce((acc, el) => {
+   card.innerHTML = arr.reduce((acc, el) => {
     const {id, img, title, price} = el
 
-     return `
+      const item = `
       <div class="card" data-product-id="${id}">
             <div class="card__wrapper">
                 <div class="card__image">
@@ -144,8 +144,11 @@ function renderProductsBasket(arr) {
            <div class="card__close"><img src="/src/img/basket/Union.svg" width="10" height="10" loading="lazy" alt="close"></div>
       </div>
       `
+   return acc + item
   }, '')
 
 }
+
+
 
 

@@ -714,7 +714,7 @@ section {
   background-color: #fcfcfc;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
 }
-.basket__title {
+.basket__title, .basket__message {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 32px;
