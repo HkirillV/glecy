@@ -114,8 +114,8 @@ function checkingActiveButtons(basket) {
 
 
 function createCards(data) {
-  data.forEach(card => {
-    const {id, img, title, price} = card
+  data.forEach(el => {
+    const {id, img, title, price} = el
     const cardItem =
       `
       <div class="list-card" data-product-id="${id}">
