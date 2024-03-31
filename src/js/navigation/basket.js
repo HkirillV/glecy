@@ -7,11 +7,13 @@ import {
   getBasketLocalStorage,
   checkingRelevanceValueBasket,
   totalAmountBasket,
-  renderWrapperBasket
+  renderWrapperBasket,
+  setEmptyBasketMessage
 } from "../function.js";
 
 
 const basketBtnElement = document.querySelector('.navigation-button__basket')
+const basketBodyElement = document.querySelector('.basket__body')
 const basketFormElement = document.querySelector('.basket')
 
 
@@ -33,8 +35,9 @@ window.addEventListener('keydown', (event) => {
 document.addEventListener('click', ({target}) => {
   const isClickInsideForm = target.closest('.basket')
   const isClickOnButton = target.closest('.navigation-button__basket')
+  const isClickCloseButton = target.closest('.card__close')
 
-  if (!isClickOnButton && !isClickInsideForm) {
+  if (!isClickOnButton && !isClickInsideForm && !isClickCloseButton) {
     basketBtnElement.classList.remove('active-btn')
     basketFormElement.classList.remove('overlay-form')
   }
@@ -49,7 +52,6 @@ getProducts()
 
 
 basket.addEventListener('click', delProductBasket)
-
 
 
 async function getProducts() {
@@ -70,11 +72,10 @@ async function getProducts() {
   }
 }
 
+setEmptyBasketMessage()
 
-export  function loadProductsBasket() {
-  basketMessage.innerHTML =  `
-  Ваша корзина пока <br> пуста
-  `
+
+export function loadProductsBasket() {
 
   if (!productData || !productData.length) {
     showErrorMessage(ERROR_SERVER)
@@ -87,16 +88,14 @@ export  function loadProductsBasket() {
 
   if (!basket || !basket.length) {
     showErrorMessage(NO_ITEMS_CARD)
-    return;
   }
 
   const findProducts = productData.filter(item => basket.includes(String(item.id)))
 
   if (!findProducts || !findProducts.length) {
     showErrorMessage(NO_ITEMS_CARD)
-    return;
   }
- console.log(findProducts)
+
 
   renderWrapperBasket()
   totalAmountBasket(findProducts)
@@ -123,12 +122,20 @@ function delProductBasket(event) {
 
 
 function renderProductsBasket(arr) {
-  const card = document.querySelector('.basket__list')
 
-   card.innerHTML = arr.reduce((acc, el) => {
+  if (arr.length === 0) {
+    setEmptyBasketMessage()
+    return
+  }
+
+  const basketListElement = document.querySelector('.basket__list')
+
+  basketMessage.innerHTML = ''
+
+  basketListElement.innerHTML = arr.reduce((acc, el) => {
     const {id, img, title, price} = el
 
-      const item = `
+    const item = `
       <div class="card" data-product-id="${id}">
             <div class="card__wrapper">
                 <div class="card__image">
@@ -144,7 +151,7 @@ function renderProductsBasket(arr) {
            <div class="card__close"><img src="/src/img/basket/Union.svg" width="10" height="10" loading="lazy" alt="close"></div>
       </div>
       `
-   return acc + item
+    return acc + item
   }, '')
 
 }

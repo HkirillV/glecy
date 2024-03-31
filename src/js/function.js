@@ -2,6 +2,14 @@
 
 
 const basketMessage = document.querySelector('.basket__message')
+const basketBodyElement = document.querySelector('.basket__body')
+
+
+
+export function setEmptyBasketMessage() {
+  basketBodyElement.innerHTML = ''
+  basketMessage.innerHTML = `Ваша корзина пока <br> пуста`
+}
 export function showErrorMessage(message) {
   console.log(message)
 }
@@ -54,9 +62,9 @@ export function totalAmountBasket (arr) {
 }
 
 export function renderWrapperBasket () {
-  const basketElement = document.querySelector('.basket')
+  const basketBodyElement = document.querySelector('.basket__body')
 
-  return basketElement.innerHTML = `
+  return basketBodyElement.innerHTML = `
     <div class="basket__content">
           <div class="basket__title">Корзина</div>
           <div class="basket__list">
