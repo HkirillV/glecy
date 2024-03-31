@@ -5,8 +5,9 @@ import {
   setBasketLocalStorage,
   getBasketLocalStorage,
   checkingRelevanceValueBasket,
-
 } from "./function.js";
+
+
 
 
 import {
@@ -21,6 +22,7 @@ const cards = document.querySelector('.list')
 const btnShowCards = document.querySelector('.show-cards')
 let showCards = COUNT_SHOW_CARDS_CLICK
 let countClickBtnShowCards = 1
+
 let productsData = []
 
 getProducts()
@@ -32,7 +34,7 @@ cards.addEventListener('click', handleCardClick)
 async function getProducts() {
   try {
     if (!productsData.length) {
-      const res = await fetch('/data/products.json')
+      const res = await fetch('http://localhost:3000/products')
       if (!res.ok) {
         throw new Error(res.statusText)
       }

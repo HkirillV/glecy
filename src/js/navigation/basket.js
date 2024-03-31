@@ -55,7 +55,7 @@ basket.addEventListener('click', delProductBasket)
 async function getProducts() {
   try {
     if (!productData.length) {
-      const res = await fetch('/data/products.json')
+      const res = await fetch('http://localhost:3000/products')
       if (!res.ok) {
         throw new Error(res.statusText)
       }
